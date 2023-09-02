@@ -20,17 +20,37 @@
 		</li>
 	</ul>
 
-	<div class="mt-32 flex justify-center">
-		<div
-			class="flex -z-10 justify-center items-center relative left-6 rounded-full bg-teal-300 w-60 h-60 opacity-60"
+	<svg class="my-32 p-2 w-full h-auto" viewBox="100 0 400 200">
+		<circle
+			cx="220"
+			cy="100"
+			r="100"
+			stroke="black"
+			stroke-dasharray="4"
+			class="fill-current text-yellow-500 opacity-40"
+		/>
+		<text
+			x="220"
+			y="100"
+			text-anchor="middle"
+			class="fill-current text-amber-800 select-none"
+			>Design</text
 		>
-			<span class="z-10 text-slate-800"> Design </span>
-		</div>
 
-		<div
-			class="flex -z-10 justify-center items-center relative right-6 rounded-full bg-amber-300 w-60 h-60 opacity-60"
+		<circle
+			cx="380"
+			cy="100"
+			r="100"
+			stroke="black"
+			stroke-dasharray="4"
+			class="fill-current text-blue-500 opacity-40"
+		/>
+		<text
+			x="380"
+			y="100"
+			text-anchor="middle"
+			class="fill-current text-blue-800 select-none"
+			>Development</text
 		>
-			<span class="z-10 text-slate-800"> Development </span>
-		</div>
-	</div>
+	</svg>
 </article>
