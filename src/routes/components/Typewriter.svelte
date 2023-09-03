@@ -21,7 +21,7 @@
 		const interval = setInterval(() => {
 			i += 1;
 			i %= messages.length;
-		}, 2500);
+		}, 3000);
 
 		return () => {
 			clearInterval(interval);
@@ -56,7 +56,7 @@
 	{#key i}
 		<span
 			class="font-serif italic text-xl"
-			in:typewriter={{ speed: 10 }}
+			in:typewriter={{ speed: 7 }}
 		>
 			{messages[i] || ""}
 		</span>

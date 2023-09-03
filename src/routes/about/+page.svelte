@@ -30,12 +30,12 @@
 	<section class="flex flex-wrap justify-center">
 		{#each photos as photo}
 			<div
-				class="m-2 p-0 h-min shadow-lg odd:-rotate-2 even:rotate-2"
+				class="h-min m-2 p-0 shadow-lg odd:-rotate-2 even:rotate-2"
 			>
 				<img
-					src={photo.src}
 					alt={photo.alt}
-					class="m-0 p-4"
+					src={photo.src}
+					class="m-0 p-4 w-[200px] h-auto transition-all duration-200 ease-linear delay-150"
 				/>
 			</div>
 		{/each}
@@ -68,4 +68,37 @@
 		<li>I moved from vim-wiki to spreadsheets.</li>
 		<li>In an alternate life, I would've been a drummer.</li>
 	</ul>
+
+	<Title>Favorites</Title>
+
+	<ul>
+		<li>
+			<strong>Music</strong> : A-ha, Abba, Baltimore, Guns N Roses,
+			John Mayer, Joji, Led Zepplin, Queen and The Police.
+		</li>
+		<li>
+			<strong>Shows</strong> : The Silicon Valley, The Office,
+			My Name is Earl and Rick and Morty.
+		</li>
+		<li>
+			<strong>Movies</strong> : Mission Impossible, Clockwork Orange,
+			The Dark Knight and Malena.
+		</li>
+		<li>
+			<strong>Books</strong> : 1984, Brave New World, Man and his
+			Symbols, Of Men and Mice, Crime and Punishment and Don Quixote.
+		</li>
+		<li>
+			<strong>Games</strong> : Dota 2, The Witcher, Assasin's Creed,
+			God of War, Portal, Tomb Raider, Hitman and Inside.
+		</li>
+	</ul>
+
+	<Title>Philosophy</Title>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Commodi, ab expedita accusamus fuga fugit enim excepturi itaque,
+		atque illum ea in quia dolorum sunt qui, error nesciunt saepe
+		mollitia iusto.
+	</p>
 </section>

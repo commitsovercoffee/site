@@ -19,6 +19,39 @@
 	];
 
 	let skills = ["bash", "git", "html", "css", "js", "go", "c", "python"];
+
+	const userReviews = [
+		{
+			id: 1,
+			name: "John Doe",
+			rating: 4.5,
+			comment: "Great website! Easy to navigate and find the information I needed.",
+			date: "2023-08-15",
+		},
+		{
+			id: 2,
+			name: "Alice Smith",
+			rating: 5.0,
+			comment: "I love this website! It's so well-designed and informative.",
+			date: "2023-08-16",
+		},
+		{
+			id: 3,
+			name: "Bob Johnson",
+			rating: 3.0,
+			comment: "It's decent, but there are some areas that could be improved.",
+			date: "2023-08-17",
+		},
+		{
+			id: 4,
+			name: "Eva Green",
+			rating: 4.0,
+			comment: "I found the website useful and user-friendly.",
+			date: "2023-08-18",
+		},
+	];
+
+	// You can add more reviews as needed
 </script>
 
 <article class=" selection:bg-teal-300">
@@ -54,6 +87,53 @@
 			>
 				Let's not do it !
 			</button>
+		</div>
+	</section>
+
+	<section class="p-4">
+		<Title>Reviews</Title>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Ea, molestias tempora. Enim, perferendis facilis fuga
+			odio nihil modi voluptas, iste accusamus omnis obcaecati
+			aliquid necessitatibus cum pariatur. Voluptas, tempora
+			nihil!
+		</p>
+
+		<div class="my-16">
+			{#each userReviews as userReview}
+				<div
+					class="m-0 p-0 my-6 border-t-4 border-slate-500 flex even:flex-row-reverse bg-slate-100 shadow-md"
+				>
+					<img
+						class="m-0 object-cover w-1/3"
+						src="https://picsum.photos/400"
+						alt="some thing"
+					/>
+					<div class="p-4 w-2/3 font-serif">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							class="h-12 inline fill-current text-slate-800 opacity-40"
+							><title
+								>format-quote-open</title
+							><path
+								d="M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z"
+							/></svg
+						>
+						<p
+							class="m-0 px-4 text-lg text-slate-600"
+						>
+							{userReview.comment}
+						</p>
+						<p
+							class="m-0 mt-4 px-4 text-slate-400 text-right"
+						>
+							{userReview.name}
+						</p>
+					</div>
+				</div>
+			{/each}
 		</div>
 	</section>
 
@@ -151,15 +231,15 @@
 							src={blog.thumbnail}
 							alt={blog.alt}
 						/>
-						<div class="p-4 w-2/3">
-							<h2
-								class="m-0 mt-4 font-black font-serif"
+						<div
+							class="p-4 w-2/3 font-serif"
+						>
+							<p
+								class="m-0 mt-4 font-bold text-xl"
 							>
 								{blog.title}
-							</h2>
-							<p
-								class="mt-2 text-base font-mono"
-							>
+							</p>
+							<p class="mt-2 text-lg">
 								{blog.desc}
 							</p>
 						</div>
