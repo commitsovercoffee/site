@@ -1,5 +1,16 @@
 <script>
 	import A from "./components/A.svelte";
+
+	let featuredBlogs = [
+		{
+			title: "Why I write these blogs.",
+			desc: "Understand the motive that started it all.",
+		},
+		{
+			title: "Guide to self taught CS mastery.",
+			desc: "Understand what makes a good engineer.",
+		},
+	];
 </script>
 
 <article class="mt-32 selection:bg-teal-300">
@@ -53,4 +64,32 @@
 			>Development</text
 		>
 	</svg>
+
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque,
+		id maiores cum inventore, non vel dolore ipsum facere, animi
+		vero velit! Incidunt delectus aspernatur similique sit. Ea
+		delectus quo dignissimos.
+	</p>
+
+	<section>
+		<h2>Featured Blogs</h2>
+		{#each featuredBlogs as blog}
+			<div class="flex p-2 m-6 rounded-xl bg-slate-200">
+				<img
+					class="m-2 rounded-xl"
+					src="https://picsum.photos/200"
+					alt=""
+				/>
+				<div class="m-2 w-full">
+					<p class="my-0 text-2xl font-black">
+						{blog.title}
+					</p>
+					<p class="my-0 text-base">
+						{blog.desc}
+					</p>
+				</div>
+			</div>
+		{/each}
+	</section>
 </article>
