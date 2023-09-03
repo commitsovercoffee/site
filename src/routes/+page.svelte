@@ -1,6 +1,7 @@
 <script>
 	import A from "./components/A.svelte";
 	import Title from "./components/Title.svelte";
+	import Typewriter from "./components/Typewriter.svelte";
 
 	let featuredBlogs = [
 		{
@@ -22,7 +23,10 @@
 
 <article class=" selection:bg-teal-300">
 	<section class="p-4 mt-32">
-		<h1>Bold, Attention stealing sentence.</h1>
+		<h1>Some catchy, attention stealing line.</h1>
+		<p class="h-32">
+			<Typewriter />
+		</p>
 
 		<p>
 			Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -104,6 +108,13 @@
 
 	<section class="p-4">
 		<Title>Skills</Title>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Sed ducimus ipsa illo ex nobis consectetur repellendus
+			debitis unde soluta excepturi. Molestias ab perspiciatis
+			consequuntur ducimus dignissimos corporis quos maxime!
+			Sint!
+		</p>
 		<div class="flex flex-wrap rounded-xl p-4">
 			{#each skills as skill}
 				<a href="/" class="hover:grayscale">
@@ -119,30 +130,42 @@
 
 	<section class="p-4">
 		<Title>Blogs</Title>
-		{#each featuredBlogs as blog}
-			<a href="/" class="no-underline hover:grayscale">
-				<div
-					class="m-0 p-0 my-6 rounded-xl flex bg-slate-200"
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Sequi quos nam praesentium possimus assumenda, qui
+			veritatis autem excepturi est ea maxime tempora labore
+			saepe eaque, non, illo nostrum repellat distinctio.
+		</p>
+
+		<div class="my-16">
+			{#each featuredBlogs as blog}
+				<a
+					href="/"
+					class="no-underline hover:grayscale"
 				>
-					<img
-						class="m-0 rounded-xl rounded-r-none object-cover w-1/3"
-						src={blog.thumbnail}
-						alt={blog.alt}
-					/>
-					<div class="p-4 w-2/3">
-						<h2
-							class="m-0 mt-4 font-black font-serif"
-						>
-							{blog.title}
-						</h2>
-						<p
-							class="mt-2 text-base font-mono"
-						>
-							{blog.desc}
-						</p>
+					<div
+						class="m-0 p-0 my-6 rounded-xl flex bg-slate-200"
+					>
+						<img
+							class="m-0 rounded-xl rounded-r-none object-cover w-1/3"
+							src={blog.thumbnail}
+							alt={blog.alt}
+						/>
+						<div class="p-4 w-2/3">
+							<h2
+								class="m-0 mt-4 font-black font-serif"
+							>
+								{blog.title}
+							</h2>
+							<p
+								class="mt-2 text-base font-mono"
+							>
+								{blog.desc}
+							</p>
+						</div>
 					</div>
-				</div>
-			</a>
-		{/each}
+				</a>
+			{/each}
+		</div>
 	</section>
 </article>
