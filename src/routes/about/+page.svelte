@@ -94,7 +94,7 @@
 		</li>
 	</ul>
 
-	<Title>Philosophy</Title>
+	<Title>Contact</Title>
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit.
 		Commodi, ab expedita accusamus fuga fugit enim excepturi itaque,

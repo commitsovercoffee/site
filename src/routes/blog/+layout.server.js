@@ -6,6 +6,7 @@ export function load() {
       slug: post.slug,
       title: post.title,
       tags: post.tags,
+      tldr: post.tldr,
     })),
   };
 }
