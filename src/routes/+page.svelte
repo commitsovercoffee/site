@@ -1,22 +1,27 @@
 <script>
 	import A from "./components/A.svelte";
+	import Title from "./components/Title.svelte";
 
 	let featuredBlogs = [
 		{
 			title: "Why I write these blogs.",
 			desc: "Understand the motive that started it all.",
+			thumbnail: "https://picsum.photos/400",
+			alt: "lorem ipsum",
 		},
 		{
-			title: "Guide to self taught CS mastery.",
-			desc: "Understand what makes a good engineer.",
+			title: "Why I write these blogs.",
+			desc: "Understand the motive that started it all.",
+			thumbnail: "https://picsum.photos/400",
+			alt: "lorem ipsum",
 		},
 	];
 
 	let skills = ["bash", "git", "html", "css", "js", "go", "c", "python"];
 </script>
 
-<article class="my-32 selection:bg-teal-300">
-	<section class="p-4">
+<article class=" selection:bg-teal-300">
+	<section class="p-4 mt-32">
 		<h1>Bold, Attention stealing sentence.</h1>
 
 		<p>
@@ -48,10 +53,9 @@
 		</div>
 	</section>
 
-	<hr class="my-24" />
-
 	<section class="p-4">
-		<h2>About Me</h2>
+		<Title>About Me</Title>
+
 		<p class="my-8">
 			Lorem ipsum dolor sit, amet consectetur adipisicing
 			elit. Atque, id maiores cum inventore, non vel dolore
@@ -72,8 +76,6 @@
 				cx="220"
 				cy="100"
 				r="100"
-				stroke="black"
-				stroke-dasharray="4"
 				class="fill-current text-yellow-500 opacity-40"
 			/>
 			<text
@@ -88,8 +90,6 @@
 				cx="380"
 				cy="100"
 				r="100"
-				stroke="black"
-				stroke-dasharray="4"
 				class="fill-current text-blue-500 opacity-40"
 			/>
 			<text
@@ -102,10 +102,8 @@
 		</svg>
 	</section>
 
-	<hr class="my-24" />
-
 	<section class="p-4">
-		<h2>Skills</h2>
+		<Title>Skills</Title>
 		<div class="flex flex-wrap rounded-xl p-4">
 			{#each skills as skill}
 				<a href="/" class="hover:grayscale">
@@ -119,8 +117,8 @@
 		</div>
 	</section>
 
-	<section class="p-4 my-32">
-		<h2 class="mb-16">Featured Blogs</h2>
+	<section class="p-4">
+		<Title>Blogs</Title>
 		{#each featuredBlogs as blog}
 			<a href="/" class="no-underline hover:grayscale">
 				<div
@@ -128,8 +126,8 @@
 				>
 					<img
 						class="m-0 rounded-xl rounded-r-none object-cover w-1/3"
-						src="https://picsum.photos/400"
-						alt="something"
+						src={blog.thumbnail}
+						alt={blog.alt}
 					/>
 					<div class="p-4 w-2/3">
 						<h2
