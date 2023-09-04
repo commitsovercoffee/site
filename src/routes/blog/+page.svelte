@@ -1,4 +1,5 @@
 <script>
+	import { fade } from "svelte/transition";
 	import Title from "../components/Title.svelte";
 	export let data;
 	let selectedTags = new Set();
@@ -10,6 +11,10 @@
 		} else {
 			selectedTags.add(tag);
 		}
+
+		selectedTags = selectedTags;
+		console.log();
+		selectedTags.has(tag);
 
 		filteredSummaries = data.summaries.filter((summary) => {
 			return (
@@ -31,21 +36,16 @@
 	<div class="my-8">
 		{#each [...new Set(data.summaries.flatMap((s) => s.tags))] as tag}
 			<button
-				class="px-2 py-1 m-1 rounded-md bg-gray-200 hover:bg-gray-300"
+				class="px-2 py-1 m-1 rounded-md {selectedTags.has(
+					tag
+				)
+					? 'bg-teal-300'
+					: 'bg-slate-200'}"
 				on:click={() => updateFilterSummaries(tag)}
 			>
 				{tag}
 			</button>
 		{/each}
-		<button
-			class="px-2 py-1 m-1 rounded-md bg-gray-200 hover:bg-gray-300"
-			on:click={() => {
-				selectedTags.clear();
-				filteredSummaries = data.summaries;
-			}}
-		>
-			Clear Filters
-		</button>
 	</div>
 
 	<div class="my-16">
@@ -53,12 +53,13 @@
 			<a
 				class="not-prose no-underline font-normal"
 				href="/blog/{slug}"
+				transition:fade
 			>
 				<div
 					class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
 				>
 					<p
-						class="font-bold decoration-2 underline underline-offset-4"
+						class="font-bold underline underline-offset-4"
 					>
 						{title}
 					</p>

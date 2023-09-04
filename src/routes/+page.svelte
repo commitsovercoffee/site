@@ -5,16 +5,19 @@
 
 	let featuredBlogs = [
 		{
-			title: "Why I write these blogs.",
-			desc: "Understand the motive that started it all.",
-			thumbnail: "https://picsum.photos/400",
-			alt: "lorem ipsum",
+			slug: "welcome",
+			title: "Welcome to the Aperture Science",
+			content: "<p>We hope your brief detention in the relaxation vault has been a pleasant one.</p><p>Your specimen has been processed and we are now ready to begin the test proper.</p>",
+			tags: ["alpha", "beta"],
+			tldr: "Welcome to the Aperture Science center, where testing begins after a relaxing detention.",
 		},
+
 		{
-			title: "Why I write these blogs.",
-			desc: "Understand the motive that started it all.",
-			thumbnail: "https://picsum.photos/400",
-			alt: "lorem ipsum",
+			slug: "safety",
+			title: "Safety notice",
+			content: "<p>While safety is one of many Enrichment Center Goals, the Aperture Science High Energy Pellet, seen to the left of the chamber, can and has caused permanent disabilities, such as vaporization. Please be careful.</p>",
+			tags: ["apple", "banana"],
+			tldr: "Beware of the dangerous Aperture Science High Energy Pellet in the chamber.",
 		},
 	];
 
@@ -218,33 +221,24 @@
 		</p>
 
 		<div class="my-16">
-			{#each featuredBlogs as blog}
+			{#each featuredBlogs as { slug, title, tldr }}
 				<a
-					href="/"
-					class="no-underline hover:grayscale"
+					class="not-prose no-underline font-normal"
+					href="/blog/{slug}"
+					transition:fade
 				>
 					<div
-						class="m-0 p-0 my-6 rounded-xl flex bg-slate-200"
+						class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
 					>
-						<img
-							class="m-0 rounded-xl rounded-r-none object-cover w-1/3"
-							src={blog.thumbnail}
-							alt={blog.alt}
-						/>
-						<div
-							class="p-4 w-2/3 font-serif"
+						<p
+							class="font-bold underline underline-offset-4"
 						>
-							<p
-								class="m-0 mt-4 font-bold text-xl"
-							>
-								{blog.title}
-							</p>
-							<p class="mt-2 text-lg">
-								{blog.desc}
-							</p>
-						</div>
+							{title}
+						</p>
+						<p class="ml-8">{tldr}</p>
 					</div>
 				</a>
+				<hr />
 			{/each}
 		</div>
 	</section>
