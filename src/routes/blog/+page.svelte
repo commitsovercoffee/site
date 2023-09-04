@@ -1,7 +1,10 @@
 <script>
+	import Title from "../../components/Title.svelte";
+
 	import { fade } from "svelte/transition";
-	import Title from "../components/Title.svelte";
+
 	export let data;
+
 	let selectedTags = new Set();
 	let filteredSummaries = data.summaries;
 
@@ -13,8 +16,6 @@
 		}
 
 		selectedTags = selectedTags;
-		console.log();
-		selectedTags.has(tag);
 
 		filteredSummaries = data.summaries.filter((summary) => {
 			return (
@@ -28,11 +29,11 @@
 <section class="p-4">
 	<Title>Blogs</Title>
 	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-		dicta magni nemo placeat distinctio alias? Provident, quo nemo.
-		Incidunt, pariatur. Omnis odio voluptates enim. Nam error
-		quibusdam rem est similique?
+		Welcome to my blog, where I share my thoughts, experiences, and
+		passions. Explore topics close to my heart and join me on a
+		journey of discovery.
 	</p>
+
 	<div class="my-8">
 		{#each [...new Set(data.summaries.flatMap((s) => s.tags))] as tag}
 			<button

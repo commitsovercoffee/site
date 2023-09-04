@@ -1,46 +1,17 @@
 <script>
-	import Title from "../components/Title.svelte";
-
-	let projects = [
-		{
-			name: "Project 1",
-			desc: "Description for Project 1",
-			repo: "https://example.com/project1",
-			demo: "/",
-		},
-		{
-			name: "Project 1",
-			desc: "Description for Project 1",
-			repo: "https://example.com/project1",
-			demo: "",
-		},
-		{
-			name: "Project 1",
-			desc: "Description for Project 1",
-			repo: "https://example.com/project1",
-			demo: "",
-		},
-		{
-			name: "Project 1",
-			desc: "Description for Project 1",
-			repo: "https://example.com/project1",
-			demo: "",
-		},
-	];
+	import Title from "../../components/Title.svelte";
+	import * as content from "./content";
 </script>
 
 <section class="py-4">
 	<Title>Projects</Title>
 
 	<p class="my-8">
-		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque,
-		id maiores cum inventore, non vel dolore ipsum facere, animi
-		vero velit! Incidunt delectus aspernatur similique sit. Ea
-		delectus quo dignissimos.
+		{content.intro}
 	</p>
 
 	<div class="flex flex-wrap justify-center">
-		{#each projects as project}
+		{#each content.projects as project}
 			<div class="p-4 m-2 rounded-xl shadow-md bg-slate-100">
 				<p>
 					<a
@@ -58,7 +29,7 @@
 					class="px-2 py-1 bg-zinc-100 border-2 border-zinc-200 rounded-xl hover:border-zinc-900 no-underline transition duration-300 ease-in"
 					>Source</a
 				>
-				{#if project.demo === ""}{:else}
+				{#if project.demo != ""}
 					<a
 						href={`https://github.com/commitsovercoffee/${project.demo}`}
 						class="px-2 py-1 bg-zinc-100 border-2 border-zinc-200 rounded-xl hover:border-zinc-900 no-underline transition duration-300 ease-in"
