@@ -1,6 +1,6 @@
 <script>
 	import "../app.css";
-	import Nav from "./_components/Nav.svelte";
+	import Nav from "$lib/components/Nav.svelte";
 
 	import { spring } from "svelte/motion";
 
@@ -23,6 +23,10 @@
 	on:mouseup={() => size.set(20)}
 />
 
+<svelte:head>
+	<title>Commits Over Coffee</title>
+</svelte:head>
+
 <svg class="fixed w-full h-full top-0 left-0 z-10 pointer-events-none">
 	<circle
 		cx={$coords.x}
@@ -33,4 +37,6 @@
 </svg>
 
 <Nav />
-<slot />
+<main>
+	<slot />
+</main>

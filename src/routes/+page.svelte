@@ -1,7 +1,7 @@
 <script>
 	import * as content from "./content.js";
-	import Typewriter from "./_components/Typewriter.svelte";
-	import Title from "./_components/Title.svelte";
+	import Typewriter from "$lib/components/Typewriter.svelte";
+	import Title from "$lib/components/Title.svelte";
 </script>
 
 <article class=" selection:bg-teal-300">

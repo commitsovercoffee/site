@@ -4,10 +4,14 @@
 
 <div class="mt-2 rounded-xl w-full">
 	<div class="px-2 flex justify-self-start items-end">
-		<img class="m-2 p-2 h-16" src="/favicon.png" alt="" />
-		<h2 class="m-2 p-2 font-light italic font-serif text-3xl">
-			Commits Over Coffee
-		</h2>
+		<a href="/" class="no-underline flex">
+			<img class="m-0 p-2 h-12" src="/favicon.png" alt="" />
+			<h2
+				class="m-0 p-2 font-light italic font-serif text-3xl"
+			>
+				Commits Over Coffee
+			</h2>
+		</a>
 	</div>
 	<div class=" flex justify-start">
 		<div class="m-2 flex justify-evenly">
