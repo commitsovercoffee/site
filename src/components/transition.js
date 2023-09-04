@@ -5,7 +5,7 @@ export function typewriter(node, { speed = 1 }) {
 
   if (!valid) {
     throw new Error(
-      `This transition only works on elements with a single text node child`
+      `This transition only works on elements with a single text node child`,
     );
   }
 

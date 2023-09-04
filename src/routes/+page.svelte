@@ -1,7 +1,7 @@
 <script>
-	import A from "./components/A.svelte";
-	import Title from "./components/Title.svelte";
-	import Typewriter from "./components/Typewriter.svelte";
+	import A from "../components/A.svelte";
+	import Title from "../components/Title.svelte";
+	import Typewriter from "../components/Typewriter.svelte";
 
 	const stages = [
 		{
