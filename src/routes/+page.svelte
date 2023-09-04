@@ -1,115 +1,20 @@
 <script>
-	import A from "../components/A.svelte";
-	import Title from "../components/Title.svelte";
-	import Typewriter from "../components/Typewriter.svelte";
-
-	const stages = [
-		{
-			phase: "Initial Consultation",
-			description:
-				"We begin our journey with a detailed conversation where we discuss your project goals, objectives, and vision. During this phase, we'll define the scope of work and establish a clear understanding of your needs.",
-		},
-		{
-			phase: "Planning and Strategy",
-			description:
-				"After our initial meeting, I'll dive into the intricacies of your project. This involves developing a comprehensive strategy, outlining timelines, milestones, and deliverables.",
-		},
-		{
-			phase: "Design Phase",
-			description:
-				"With a clear plan in place, I'll start sketching out the interface for the app. Expect regular updates and opportunities for your feedback throughout this phase.",
-		},
-		{
-			phase: "Development",
-			description:
-				"As the design takes shape, we transition into the development phase.  I'll be meticulously coding, testing, and refining the technical aspects of your project to ensure it functions flawlessly.",
-		},
-		{
-			phase: "Testing and Refinement",
-			description:
-				"The dance continues as we test every nook and cranny of the project, ensuring it aligns with your objectives and meets our high-quality standards. We'll make any necessary adjustments and refinements based on your feedback.",
-		},
-		{
-			phase: "Deployment",
-			description:
-				"With your project polished to perfection, it's time to take it live. I'll handle the technical aspects of deployment, ensuring a smooth transition from development to the real world.",
-		},
-		{
-			phase: "Post-Launch Support",
-			description:
-				"Our partnership doesn't end at launch. I'll provide ongoing support, addressing any issues, updates, or enhancements that may arise as your project evolves.",
-		},
-	];
-
-	let featuredBlogs = [
-		{
-			slug: "welcome",
-			title: "Welcome to the Aperture Science",
-			content: "<p>We hope your brief detention in the relaxation vault has been a pleasant one.</p><p>Your specimen has been processed and we are now ready to begin the test proper.</p>",
-			tags: ["alpha", "beta"],
-			tldr: "Welcome to the Aperture Science center, where testing begins after a relaxing detention.",
-		},
-
-		{
-			slug: "safety",
-			title: "Safety notice",
-			content: "<p>While safety is one of many Enrichment Center Goals, the Aperture Science High Energy Pellet, seen to the left of the chamber, can and has caused permanent disabilities, such as vaporization. Please be careful.</p>",
-			tags: ["apple", "banana"],
-			tldr: "Beware of the dangerous Aperture Science High Energy Pellet in the chamber.",
-		},
-	];
-
-	let skills = ["bash", "git", "html", "css", "js", "go", "c", "python"];
-
-	const userReviews = [
-		{
-			id: 1,
-			name: "John Doe",
-			rating: 4.5,
-			comment: "Great website! Easy to navigate and find the information I needed.",
-			date: "2023-08-15",
-		},
-		{
-			id: 2,
-			name: "Alice Smith",
-			rating: 5.0,
-			comment: "I love this website! It's so well-designed and informative.",
-			date: "2023-08-16",
-		},
-		{
-			id: 3,
-			name: "Bob Johnson",
-			rating: 3.0,
-			comment: "It's decent, but there are some areas that could be improved.",
-			date: "2023-08-17",
-		},
-		{
-			id: 4,
-			name: "Eva Green",
-			rating: 4.0,
-			comment: "I found the website useful and user-friendly.",
-			date: "2023-08-18",
-		},
-	];
-
-	// You can add more reviews as needed
+	import * as content from "./content.js";
+	import Typewriter from "./_components/Typewriter.svelte";
+	import Title from "./_components/Title.svelte";
 </script>
 
 <article class=" selection:bg-teal-300">
 	<section class="p-4 mt-32">
 		<h1 class="bg-teal-300 inline">
-			Build reliable apps for remarkable impact.
+			{content.heading}
 		</h1>
 		<p class="h-16">
-			<Typewriter />
+			<Typewriter messages={content.remarks} />
 		</p>
 
 		<p>
-			I firmly believe that there should be a harmonious blend
-			of design and development in software, resulting in
-			dependable solutions that empower you to solve problems
-			effectively. And that's precisely what I specialize in
-			here.
+			{content.intro}
 		</p>
 
 		<p />
@@ -138,25 +43,26 @@
 	<section class="p-4">
 		<Title>Who am I ?</Title>
 		<img
-			alt="something"
-			src="https://via.placeholder.com/200x300"
+			alt={content.dp.alt}
+			src={content.dp.src}
 			class="border-2 lg:float-left m-6 p-2 h-auto transition-all duration-200 ease-linear delay-150"
 		/>
 		<div class="px-4">
-			<p>
-				I am an independent software developer with 3
-				years of experience. Currently building learning
-				solutions with Quest Alliance. Working remotely
-				from Ranchi, India.
-			</p>
+			{#each content.whoami as para}
+				<p>{para}</p>
+			{/each}
 
-			<p>
-				You can find me on <A label="GitHub" />, <A
-					label="Mastodon"
-				/>, <A label="Twitter" /> and <A
-					label="YouTube"
-				/>. If you enjoy my works, consider sponsoring
-				me on GitHub Sponsor to keep them sustainable.
+			<p class="inline">
+				Feel free to reach out ! Don't feel shy. You can
+				find me on these platforms.
+				{#each content.socials as social}
+					<a
+						class="inline mx-1 hover:bg-teal-300"
+						href={social.link}
+					>
+						{social.platform}
+					</a>
+				{/each}
 			</p>
 		</div>
 	</section>
@@ -164,13 +70,11 @@
 	<section class="p-4">
 		<Title>Reviews</Title>
 		<p>
-			Grateful for the opportunity to work with some fantastic
-			folks. Their kind words keep me inspired and motivated
-			to keep delivering top-notch work.
+			{content.review}
 		</p>
 
 		<div class="my-16">
-			{#each userReviews as userReview}
+			{#each content.userReviews as userReview}
 				<div
 					class="m-0 p-0 my-6 border-t-4 border-slate-500 flex even:flex-row-reverse bg-slate-100 shadow-md"
 				>
@@ -210,13 +114,11 @@
 		<Title>Approach</Title>
 
 		<p class="my-8">
-			Wondering how it all unfolds? Once we've connected and
-			it's clear that we're a great match, here's what lies
-			ahead in the journey.
+			{content.approach}
 		</p>
 
 		<ul>
-			{#each stages as stage}
+			{#each content.stages as stage}
 				<li class="text-slate-600">
 					<span class="text-slate-800 font-bold"
 						>{stage.phase}</span
@@ -260,17 +162,15 @@
 	<section class="p-4">
 		<Title>Skills</Title>
 		<p>
-			Your choice of tools can either be the wind in your
-			sails or the anchor holding you back. Here's a glimpse
-			of my current arsenal.
+			{content.skill}
 		</p>
 		<div class="flex flex-wrap rounded-xl p-4">
-			{#each skills as skill}
-				<a href="/" class="hover:grayscale">
+			{#each content.skills as skill}
+				<a href={skill.link} class="hover:grayscale">
 					<img
 						class="m-2 rounded-xl"
-						src="https://picsum.photos/120"
-						alt=""
+						src={skill.src}
+						alt={skill.alt}
 					/>
 				</a>
 			{/each}
@@ -280,13 +180,11 @@
 	<section class="p-4">
 		<Title>Featured Blogs</Title>
 		<p>
-			Occasionally, I take a moment to gather my thoughts and
-			distill them into insightful blog posts. Give them a
-			read; you might uncover something beneficial.
+			{content.featuredBlog}
 		</p>
 
 		<div class="my-16">
-			{#each featuredBlogs as { slug, title, tldr }}
+			{#each content.featuredBlogs as { slug, title, tldr }}
 				<a
 					class="not-prose no-underline font-normal"
 					href="/blog/{slug}"

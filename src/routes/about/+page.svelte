@@ -1,5 +1,5 @@
 <script>
-	import Title from "../../components/Title.svelte";
+	import Title from "../_components/Title.svelte";
 	import * as content from "./content";
 </script>
 

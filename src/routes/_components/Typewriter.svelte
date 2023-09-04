@@ -1,15 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 
-	export const messages = [
-		"Tick-tock, app o'clock! Let's start building your dream.",
-		"No more 'someday.' Today's the day for your app to shine.",
-		"The app train is leaving the station; hop on board!",
-		"In coding, we trust - but we also test, just in case.",
-		"Why dream it when you can build it? Let's get started!",
-		"Don't just think it; let's ink it! Your app, our expertise.",
-		"I use arch btw.",
-	];
+	export let messages = ["message 1", "message 2", "message 3"];
 
 	let i = -1;
 

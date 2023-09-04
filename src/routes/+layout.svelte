@@ -1,6 +1,6 @@
 <script>
 	import "../app.css";
-	import Nav from "../components/Nav.svelte";
+	import Nav from "./_components/Nav.svelte";
 
 	import { spring } from "svelte/motion";
 

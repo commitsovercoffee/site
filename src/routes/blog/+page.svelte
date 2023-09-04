@@ -1,6 +1,5 @@
 <script>
-	import Title from "../../components/Title.svelte";
-
+	import Title from "../_components/Title.svelte";
 	import { fade } from "svelte/transition";
 
 	export let data;
