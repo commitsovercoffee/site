@@ -3,6 +3,44 @@
 	import Title from "./components/Title.svelte";
 	import Typewriter from "./components/Typewriter.svelte";
 
+	const stages = [
+		{
+			phase: "Initial Consultation",
+			description:
+				"We begin our journey with a detailed conversation where we discuss your project goals, objectives, and vision. During this phase, we'll define the scope of work and establish a clear understanding of your needs.",
+		},
+		{
+			phase: "Planning and Strategy",
+			description:
+				"After our initial meeting, I'll dive into the intricacies of your project. This involves developing a comprehensive strategy, outlining timelines, milestones, and deliverables.",
+		},
+		{
+			phase: "Design Phase",
+			description:
+				"With a clear plan in place, I'll start sketching out the interface for the app. Expect regular updates and opportunities for your feedback throughout this phase.",
+		},
+		{
+			phase: "Development",
+			description:
+				"As the design takes shape, we transition into the development phase.  I'll be meticulously coding, testing, and refining the technical aspects of your project to ensure it functions flawlessly.",
+		},
+		{
+			phase: "Testing and Refinement",
+			description:
+				"The dance continues as we test every nook and cranny of the project, ensuring it aligns with your objectives and meets our high-quality standards. We'll make any necessary adjustments and refinements based on your feedback.",
+		},
+		{
+			phase: "Deployment",
+			description:
+				"With your project polished to perfection, it's time to take it live. I'll handle the technical aspects of deployment, ensuring a smooth transition from development to the real world.",
+		},
+		{
+			phase: "Post-Launch Support",
+			description:
+				"Our partnership doesn't end at launch. I'll provide ongoing support, addressing any issues, updates, or enhancements that may arise as your project evolves.",
+		},
+	];
+
 	let featuredBlogs = [
 		{
 			slug: "welcome",
@@ -59,48 +97,76 @@
 
 <article class=" selection:bg-teal-300">
 	<section class="p-4 mt-32">
-		<h1>Some catchy, attention stealing line.</h1>
-		<p class="h-32">
+		<h1 class="bg-teal-300 inline">
+			Build reliable apps for remarkable impact.
+		</h1>
+		<p class="h-16">
 			<Typewriter />
 		</p>
 
 		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing
-			elit. Atque, id maiores cum inventore, non vel dolore
-			ipsum facere, animi vero velit! Incidunt delectus
-			aspernatur similique sit. Ea delectus quo dignissimos.
+			I firmly believe that there should be a harmonious blend
+			of design and development in software, resulting in
+			dependable solutions that empower you to solve problems
+			effectively. And that's precisely what I specialize in
+			here.
 		</p>
 
-		<p>
-			Find me on <A label="GitHub" />, <A label="Mastodon" />, <A
-				label="Twitter"
-			/> and <A label="YouTube" />. If you enjoy my works,
-			consider sponsoring me on GitHub Sponsor to keep them
-			sustainable.
-		</p>
+		<p />
 
-		<div class="my-8">
-			<button
-				class="mr-2 bg-slate-200 p-4 rounded-xl hover:bg-slate-800 hover:text-slate-200"
+		<div class="my-8 font-bold">
+			<a
+				href="mailto:commitsovercoffee@gmail.com?subject=I%20have%20an%20app%20idea!&body=I'm%20interested%20in%20discussing%20a%20potential%20project...%20 "
 			>
-				Let's do it !
-			</button>
-			<button
-				class="bg-slate-200 p-4 rounded-xl hover:bg-slate-800 hover:text-slate-200"
-			>
-				Let's not do it !
-			</button>
+				<button
+					class="mr-2 bg-slate-200 p-4 rounded-xl hover:bg-slate-800 hover:text-slate-200"
+				>
+					Let's Talk!
+				</button>
+			</a>
+
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+				<button
+					class="bg-slate-200 p-4 rounded-xl hover:bg-slate-800 hover:text-slate-200"
+				>
+					Ahh ... !
+				</button>
+			</a>
+		</div>
+	</section>
+
+	<section class="p-4">
+		<Title>Who am I ?</Title>
+		<img
+			alt="something"
+			src="https://via.placeholder.com/200x300"
+			class="border-2 lg:float-left m-6 p-2 h-auto transition-all duration-200 ease-linear delay-150"
+		/>
+		<div class="px-4">
+			<p>
+				I am an independent software developer with 3
+				years of experience. Currently building learning
+				solutions with Quest Alliance. Working remotely
+				from Ranchi, India.
+			</p>
+
+			<p>
+				You can find me on <A label="GitHub" />, <A
+					label="Mastodon"
+				/>, <A label="Twitter" /> and <A
+					label="YouTube"
+				/>. If you enjoy my works, consider sponsoring
+				me on GitHub Sponsor to keep them sustainable.
+			</p>
 		</div>
 	</section>
 
 	<section class="p-4">
 		<Title>Reviews</Title>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Ea, molestias tempora. Enim, perferendis facilis fuga
-			odio nihil modi voluptas, iste accusamus omnis obcaecati
-			aliquid necessitatibus cum pariatur. Voluptas, tempora
-			nihil!
+			Grateful for the opportunity to work with some fantastic
+			folks. Their kind words keep me inspired and motivated
+			to keep delivering top-notch work.
 		</p>
 
 		<div class="my-16">
@@ -141,21 +207,23 @@
 	</section>
 
 	<section class="p-4">
-		<Title>About Me</Title>
+		<Title>Approach</Title>
 
 		<p class="my-8">
-			Lorem ipsum dolor sit, amet consectetur adipisicing
-			elit. Atque, id maiores cum inventore, non vel dolore
-			ipsum facere, animi vero velit! Incidunt delectus
-			aspernatur similique sit. Ea delectus quo dignissimos.
+			Wondering how it all unfolds? Once we've connected and
+			it's clear that we're a great match, here's what lies
+			ahead in the journey.
 		</p>
 
 		<ul>
-			<li>Interesting bullet point and an <A />.</li>
-			<li>A <A /> and another interesting bullet point.</li>
-			<li>
-				Interesting bullet point <A />.
-			</li>
+			{#each stages as stage}
+				<li class="text-slate-600">
+					<span class="text-slate-800 font-bold"
+						>{stage.phase}</span
+					>
+					{stage.description}
+				</li>
+			{/each}
 		</ul>
 
 		<svg class="my-16 p-2 w-full h-auto" viewBox="100 0 400 200">
@@ -192,11 +260,9 @@
 	<section class="p-4">
 		<Title>Skills</Title>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Sed ducimus ipsa illo ex nobis consectetur repellendus
-			debitis unde soluta excepturi. Molestias ab perspiciatis
-			consequuntur ducimus dignissimos corporis quos maxime!
-			Sint!
+			Your choice of tools can either be the wind in your
+			sails or the anchor holding you back. Here's a glimpse
+			of my current arsenal.
 		</p>
 		<div class="flex flex-wrap rounded-xl p-4">
 			{#each skills as skill}
@@ -212,12 +278,11 @@
 	</section>
 
 	<section class="p-4">
-		<Title>Blogs</Title>
+		<Title>Featured Blogs</Title>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Sequi quos nam praesentium possimus assumenda, qui
-			veritatis autem excepturi est ea maxime tempora labore
-			saepe eaque, non, illo nostrum repellat distinctio.
+			Occasionally, I take a moment to gather my thoughts and
+			distill them into insightful blog posts. Give them a
+			read; you might uncover something beneficial.
 		</p>
 
 		<div class="my-16">
