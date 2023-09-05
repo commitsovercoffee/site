@@ -2,6 +2,14 @@
 	import * as content from "./content.js";
 	import Typewriter from "$lib/components/Typewriter.svelte";
 	import Title from "$lib/components/Title.svelte";
+	import Accordion from "$lib/components/Accordion.svelte";
+
+	let show = null;
+	const items = ["One", "Two", "Three", "Four", "Five"];
+
+	const showCollapse = (i) => {
+		i === show ? (show = null) : (show = i);
+	};
 
 	export let data;
 	let featuredPosts = data.featuredPosts;
@@ -120,46 +128,15 @@
 			{content.approach}
 		</p>
 
-		<ul>
-			{#each content.stages as stage}
-				<li class="text-slate-600">
-					<span class="text-slate-800 font-bold"
-						>{stage.phase}</span
-					>
-					{stage.description}
-				</li>
-			{/each}
-		</ul>
-
-		<svg class="my-16 p-2 w-full h-auto" viewBox="100 0 400 200">
-			<circle
-				cx="220"
-				cy="100"
-				r="100"
-				class="fill-current text-yellow-500 opacity-40"
+		{#each content.stages as stage, i}
+			<Accordion
+				{i}
+				{show}
+				{showCollapse}
+				label={stage.phase}
+				content={stage.description}
 			/>
-			<text
-				x="220"
-				y="100"
-				text-anchor="middle"
-				class="fill-current text-amber-800 select-none"
-				>Design</text
-			>
-
-			<circle
-				cx="380"
-				cy="100"
-				r="100"
-				class="fill-current text-blue-500 opacity-40"
-			/>
-			<text
-				x="380"
-				y="100"
-				text-anchor="middle"
-				class="fill-current text-blue-800 select-none"
-				>Development</text
-			>
-		</svg>
+		{/each}
 	</section>
 
 	<section class="p-4">
