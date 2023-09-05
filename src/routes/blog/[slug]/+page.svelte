@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 	import { page } from "$app/stores";
+	import Title from "$lib/components/Title.svelte";
 
 	export let data;
 
@@ -41,24 +42,38 @@
 	});
 </script>
 
-<article>
-	<h1>{data.title}</h1>
-	<p>Published: {data.date}</p>
-	<svelte:component this={data.content} />
-</article>
+<section class="p-4">
+	<Title>
+		{data.title}
+	</Title>
 
-{#if relevantPosts.length > 0}
-	<section>
-		<h2>Relevant Posts</h2>
-		<ul>
+	<div class="p-8 m-0">
+		<svelte:component this={data.content} />
+	</div>
+
+	{#if relevantPosts.length > 0}
+		<section class="my-16">
+			<Title>Relevant Posts</Title>
 			{#each relevantPosts as post}
-				<li>
-					<a href={`${post.path}`}>
-						<h3>{post.meta.title}</h3>
-					</a>
-					<p>{post.meta.desc}</p>
-				</li>
+				<a
+					class="not-prose no-underline font-normal"
+					href={`${post.path}`}
+				>
+					<div
+						class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
+					>
+						<p
+							class="font-bold underline underline-offset-4"
+						>
+							{post.meta.title}
+						</p>
+						<p class="ml-8">
+							{post.meta.desc}
+						</p>
+					</div>
+				</a>
+				<hr />
 			{/each}
-		</ul>
-	</section>
-{/if}
+		</section>
+	{/if}
+</section>

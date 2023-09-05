@@ -6,6 +6,7 @@ tags:
   - thought
   - trial
 published: true
+featured: true
 ---
 
 # Hello there

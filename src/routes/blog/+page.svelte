@@ -66,7 +66,6 @@
 						</p>
 						<p class="ml-8">
 							{meta.desc}
-							{meta.tags}
 						</p>
 					</div>
 				</a>

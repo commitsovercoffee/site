@@ -2,6 +2,9 @@
 	import * as content from "./content.js";
 	import Typewriter from "$lib/components/Typewriter.svelte";
 	import Title from "$lib/components/Title.svelte";
+
+	export let data;
+	let featuredPosts = data.featuredPosts;
 </script>
 
 <article class=" selection:bg-teal-300">
@@ -184,11 +187,11 @@
 		</p>
 
 		<div class="my-16">
-			{#each content.featuredBlogs as { slug, title, tldr }}
+			{#each featuredPosts as post}
 				<a
 					class="not-prose no-underline font-normal"
-					href="/blog/{slug}"
 					transition:fade
+					href={post.path}
 				>
 					<div
 						class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
@@ -196,9 +199,11 @@
 						<p
 							class="font-bold underline underline-offset-4"
 						>
-							{title}
+							{post.meta.title}
 						</p>
-						<p class="ml-8">{tldr}</p>
+						<p class="ml-8">
+							{post.meta.desc}
+						</p>
 					</div>
 				</a>
 				<hr />
