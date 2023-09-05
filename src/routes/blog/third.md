@@ -3,7 +3,7 @@ title: third post
 desc: this is the third post
 date: "2023-12-14"
 tags:
-  - thought
+  - confession
   - trial
 published: true
 ---
