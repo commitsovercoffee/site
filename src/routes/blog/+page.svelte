@@ -5,9 +5,9 @@
 	export let data;
 
 	let selectedTags = new Set();
-	let filteredSummaries = data.summaries;
+	let filteredPosts = data.posts;
 
-	function updateFilterSummaries(tag) {
+	function updateFilterPosts(tag) {
 		if (selectedTags.has(tag)) {
 			selectedTags.delete(tag);
 		} else {
@@ -16,10 +16,10 @@
 
 		selectedTags = selectedTags;
 
-		filteredSummaries = data.summaries.filter((summary) => {
+		filteredPosts = data.posts.filter((post) => {
 			return (
 				selectedTags.size === 0 ||
-				summary.tags.some((t) => selectedTags.has(t))
+				post.meta.tags.some((t) => selectedTags.has(t))
 			);
 		});
 	}
@@ -34,14 +34,14 @@
 	</p>
 
 	<div class="my-8">
-		{#each [...new Set(data.summaries.flatMap((s) => s.tags))] as tag}
+		{#each [...new Set(data.posts.flatMap((p) => p.meta.tags))] as tag}
 			<button
 				class="px-2 py-1 m-1 rounded-md {selectedTags.has(
 					tag
 				)
 					? 'bg-teal-300'
 					: 'bg-slate-200'}"
-				on:click={() => updateFilterSummaries(tag)}
+				on:click={() => updateFilterPosts(tag)}
 			>
 				{tag}
 			</button>
@@ -49,24 +49,29 @@
 	</div>
 
 	<div class="my-16">
-		{#each filteredSummaries as { slug, title, tldr }}
-			<a
-				class="not-prose no-underline font-normal"
-				href="/blog/{slug}"
-				transition:fade
-			>
-				<div
-					class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
+		{#each filteredPosts as { path, meta }}
+			{#if meta.published}
+				<a
+					class="not-prose no-underline font-normal"
+					href={path}
+					transition:fade
 				>
-					<p
-						class="font-bold underline underline-offset-4"
+					<div
+						class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
 					>
-						{title}
-					</p>
-					<p class="ml-8">{tldr}</p>
-				</div>
-			</a>
-			<hr />
+						<p
+							class="font-bold underline underline-offset-4"
+						>
+							{meta.title}
+						</p>
+						<p class="ml-8">
+							{meta.desc}
+							{meta.tags}
+						</p>
+					</div>
+				</a>
+				<hr />
+			{/if}
 		{/each}
 	</div>
 </section>
