@@ -9,13 +9,13 @@
 </script>
 
 <div
-	class="p-4 border border-gray-300 transition-all duration-200 ease-in-out collapse__header hover:bg-gray-200"
+	class="p-4 border border-gray-300 transition-all duration-200 ease-in-out collapse__header hover:bg-stone-300"
 	on:click={showCollapse(i)}
 >
 	{label}
 </div>
 {#if show === i}
-	<div class="p-4 bg-gray-200 collapse__body" transition:slide>
+	<div class="p-4 bg-stone-200 collapse__body" transition:slide>
 		{content}
 	</div>
 {/if}

@@ -17,7 +17,7 @@
 </script>
 
 <a
-	class="hover:bg-teal-300 transition-all duration-200 underline-offset-4"
+	class="hover:bg-red-400 transition-all duration-200 underline-offset-4"
 	href={link}
 	>{label}
 </a>

@@ -1,7 +1,6 @@
 // Projects -------------------------------------------------------------------
 
-export const intro =
-  "Welcome to my world of projects, where I bring ideas to life and turn concepts into reality, one project at a time.";
+export const intro = "Somehow I always find time to tinker. Check 'em out !";
 
 export const projects = [
   {

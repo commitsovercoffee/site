@@ -15,9 +15,9 @@
 	let featuredPosts = data.featuredPosts;
 </script>
 
-<article class=" selection:bg-teal-300">
+<article>
 	<section class="p-4 mt-32">
-		<h1 class="bg-teal-300 inline">
+		<h1 class="m-0 p-0 bg-stone-300 inline leading-loose uppercase">
 			{content.heading}
 		</h1>
 		<p class="h-16">
@@ -35,17 +35,19 @@
 				href="mailto:commitsovercoffee@gmail.com?subject=I%20have%20an%20app%20idea!&body=I'm%20interested%20in%20discussing%20a%20potential%20project...%20 "
 			>
 				<button
-					class="mr-2 bg-slate-200 p-4 rounded-xl hover:bg-slate-800 hover:text-slate-200"
+					class="no-underline border-2 p-4 m-4 rounded-2xl border-stone-800 bg-stone-300 hover:bg-stone-800 hover:text-stone-300 transition-colors duration-200 ease-in font-black"
 				>
 					Let's Talk!
 				</button>
 			</a>
 
-			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+			<a
+				href="mailto:commitsovercoffee@gmail.com?subject=I%20have%20an%20app%20idea!&body=I'm%20interested%20in%20discussing%20a%20potential%20project...%20 "
+			>
 				<button
-					class="bg-slate-200 p-4 rounded-xl hover:bg-slate-800 hover:text-slate-200"
+					class="no-underline p-4 m-4 rounded-2xl border-stone-800 bg-stone-300 hover:bg-stone-800 hover:text-stone-300 transition-colors duration-200 ease-in"
 				>
-					Ahh ... !
+					Let's Not Talk!
 				</button>
 			</a>
 		</div>
@@ -58,7 +60,7 @@
 			<img
 				alt={content.dp.alt}
 				src={content.dp.src}
-				class="border-2 m-6 p-2 h-auto transition-all duration-200 ease-linear delay-150"
+				class="border-2 shadow-md shadow-stone-400 m-4 p-2 h-auto transition-all duration-200 ease-linear delay-150"
 			/>
 			<div class="px-4">
 				{#each content.whoami as para}
@@ -67,10 +69,7 @@
 
 				<p class="inline">
 					{#each content.socials as social}
-						<a
-							class="inline mx-1 hover:bg-teal-300"
-							href={social.link}
-						>
+						<a href={social.link}>
 							{social.platform}
 						</a>
 					{/each}
@@ -89,7 +88,7 @@
 		<div class="my-16">
 			{#each content.userReviews as userReview}
 				<div
-					class="m-0 p-0 my-6 border-t-4 border-slate-500 flex even:flex-row-reverse bg-slate-100 shadow-md"
+					class=" m-0 p-0 my-6 border-t-4 border-stone-800 flex even:flex-row-reverse bg-stone-200 shadow-md"
 				>
 					<img
 						class="m-0 object-cover w-1/3"
@@ -100,20 +99,18 @@
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
-							class="h-12 inline fill-current text-slate-800 opacity-40"
+							class="h-12 inline"
 							><title
 								>format-quote-open</title
 							><path
 								d="M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z"
 							/></svg
 						>
-						<p
-							class="m-0 px-4 text-lg text-slate-600"
-						>
+						<p class="m-0 px-4 text-lg">
 							{userReview.comment}
 						</p>
 						<p
-							class="m-0 mt-4 px-4 text-slate-400 text-right"
+							class="m-0 mt-4 px-4 text-right"
 						>
 							{userReview.name}
 						</p>
@@ -146,14 +143,14 @@
 		<p>
 			{content.skill}
 		</p>
-		<div class="flex flex-wrap rounded-xl p-4">
+
+		<div class="flex flex-wrap">
 			{#each content.skills as skill}
-				<a href={skill.link} class="hover:grayscale">
-					<img
-						class="m-2 rounded-xl"
-						src={skill.src}
-						alt={skill.alt}
-					/>
+				<a
+					class="no-underline border-2 px-4 py-2 m-2 rounded-xl hover:border-stone-800 hover:bg-stone-300"
+					href="/"
+				>
+					{skill.label}
 				</a>
 			{/each}
 		</div>
@@ -161,31 +158,67 @@
 
 	<section class="p-4">
 		<Title>Featured Blogs</Title>
-		<p>
+		<p class="my-32">
 			{content.featuredBlog}
 		</p>
 
-		<div class="my-16">
+		<div class=" font-serif">
 			{#each featuredPosts as post}
-				<a
-					class="not-prose no-underline font-normal"
-					transition:fade
-					href={post.path}
+				<div
+					class="p-4 hover:border-stone-800 border-t-4 border-t-stone-600 cursor-pointer transition-all duration-200 ease-in even:bg-stone-200 odd:bg-stone-100"
 				>
-					<div
-						class="p-4 rounded-xl border-2 border-dashed cursor-pointer border-transparent hover:border-slate-600 transition-all duration-200 ease-in"
+					<a
+						class="shadow-md shadow-stone-600 font-normal bg-red-100 no-underline"
+						transition:fade
+						href={post.path}
 					>
-						<p
-							class="font-bold underline underline-offset-4"
+						<div
+							class="mt-4 flex justify-start p-4"
 						>
-							{post.meta.title}
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-link"
+								><path
+									d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+								/><path
+									d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+								/></svg
+							>
+
+							<p
+								class="my-0 mx-4 uppercase text-3xl font-bold underline-offset-8 underline"
+							>
+								{post.meta
+									.title}
+							</p>
+						</div>
+						<p
+							class=" font-serif text-xl p-4"
+						>
+							Lorem ipsum dolor sit
+							amet consectetur
+							adipisicing elit.
+							Mollitia accusamus
+							blanditiis eveniet!
+							Cupiditate, aperiam
+							reprehenderit, pariatur
+							voluptatibus nostrum
+							repellendus sequi
+							commodi labore
+							asperiores aliquam quae
+							soluta cumque blanditiis
+							assumenda dolor!
 						</p>
-						<p class="ml-8">
-							{post.meta.desc}
-						</p>
-					</div>
-				</a>
-				<hr />
+					</a>
+				</div>
 			{/each}
 		</div>
 	</section>

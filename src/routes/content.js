@@ -79,37 +79,37 @@ export const approach =
 
 export const stages = [
   {
-    phase: "Initial Consultation",
+    phase: "1. Initial Consultation",
     description:
       "We begin our journey with a detailed conversation where we discuss your project goals, objectives, and vision. During this phase, we'll define the scope of work and establish a clear understanding of your needs.",
   },
   {
-    phase: "Planning and Strategy",
+    phase: "2. Planning and Strategy",
     description:
       "After our initial meeting, I'll dive into the intricacies of your project. This involves developing a comprehensive strategy, outlining timelines, milestones, and deliverables.",
   },
   {
-    phase: "Design Phase",
+    phase: "3. Design Phase",
     description:
       "With a clear plan in place, I'll start sketching out the interface for the app. Expect regular updates and opportunities for your feedback throughout this phase.",
   },
   {
-    phase: "Development",
+    phase: "4. Development",
     description:
       "As the design takes shape, we transition into the development phase.  I'll be meticulously coding, testing, and refining the technical aspects of your project to ensure it functions flawlessly.",
   },
   {
-    phase: "Testing and Refinement",
+    phase: "5. Testing and Refinement",
     description:
       "The dance continues as we test every nook and cranny of the project, ensuring it aligns with your objectives and meets our high-quality standards. We'll make any necessary adjustments and refinements based on your feedback.",
   },
   {
-    phase: "Deployment",
+    phase: "6. Deployment",
     description:
       "With your project polished to perfection, it's time to take it live. I'll handle the technical aspects of deployment, ensuring a smooth transition from development to the real world.",
   },
   {
-    phase: "Post-Launch Support",
+    phase: "7. Post-Launch Support",
     description:
       "Our partnership doesn't end at launch. I'll provide ongoing support, addressing any issues, updates, or enhancements that may arise as your project evolves.",
   },
@@ -121,32 +121,26 @@ export const skill =
   "	Your choice of tools can either be the wind in your sails or the anchor holding you back. Here's a glimpse of my current arsenal.";
 
 export const skills = [
-  {
-    alt: "Image 1",
-    src: `https://picsum.photos/120?random=1`,
-    link: `https://go.dev`,
-  },
-  {
-    alt: "Image 2",
-    src: `https://picsum.photos/120?random=2`,
-    link: `https://go.dev`,
-  },
-  {
-    alt: "Image 3",
-    src: `https://picsum.photos/120?random=3`,
-    link: `https://go.dev`,
-  },
-  {
-    alt: "Image 4",
-    src: `https://picsum.photos/120?random=4`,
-    link: `https://go.dev`,
-  },
+  { label: "Linux", url: "/" },
+  { label: "Neovim", url: "/" },
+  { label: "Bash", url: "/" },
+  { label: "Git", url: "/" },
+  { label: "HTML", url: "/" },
+  { label: "CSS", url: "red" },
+  { label: "JS", url: "purple" },
+  { label: "Tailwind", url: "teal" },
+  { label: "Svelte", url: "pink" },
+  { label: "Sveltekit", url: "blue" },
+  { label: "Go", url: "green" },
+  { label: "MySQL", url: "orange" },
+  { label: "GCP", url: "red" },
+  { label: "Firebase", url: "purple" },
 ];
 
 // Featured Blogs -------------------------------------------------------------
 
 export const featuredBlog =
-  "Occasionally, I take a moment to gather my thoughts and distill them into insightful blog posts. Give them a read; you might uncover something beneficial.";
+  "Occasionally, I take a moment to gather my thoughts and distill them into blog posts. Give them a read; you might find something interesting.";
 
 export const featuredBlogs = [
   {

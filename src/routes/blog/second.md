@@ -7,6 +7,7 @@ tags:
   - blog
   - confession
 published: true
+featured: true
 ---
 
 # Hello there
