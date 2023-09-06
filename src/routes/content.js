@@ -13,7 +13,7 @@ export const remarks = [
 ];
 
 export const intro =
-  "I firmly believe that there should be a harmonious blend of design and development in software, resulting in dependable solutions that empower you to solve problems effectively. And that's precisely what I specialize in here.";
+  "There should be a harmonious blend of design and development in software, resulting in dependable solutions that empower you to solve problems effectively. And that's precisely what I specialize in here. Have an idea ?";
 
 // Who am I ? -----------------------------------------------------------------
 
@@ -23,7 +23,9 @@ export const dp = {
 };
 
 export const whoami = [
-  "I am an independent software developer with 3 years of experience. Currently building learning solutions with Quest Alliance. Working remotely from Ranchi, India.",
+  "Hello ! I'm Sourav Singh.",
+  "An Independent software developer with 4 years of experience. Currently building learning solutions with Quest Alliance. Working remotely from Ranchi, India.",
+  "When I'm not tinkering, I also sketch, write and youtube sometimes :D",
 ];
 
 export const socials = [
@@ -44,25 +46,29 @@ export const socials = [
 // Reviews --------------------------------------------------------------------
 
 export const review =
-  "Grateful for the opportunity to work with some fantastic folks. Their kind words keep me inspired and motivated to keep delivering top-notch work.";
+  "I'm grateful for the chance to work with some fantastic folks. The camaraderie among everyone made it a delightful experience. Here's their perspective on working with me. Their words not mine ...";
 
 export const userReviews = [
   {
     name: "John Doe",
     comment:
       "Great website! Easy to navigate and find the information I needed.",
+    url: "JohnDoeReviewURL",
   },
   {
     name: "Alice Smith",
     comment: "I love this website! It's so well-designed and informative.",
+    url: "AliceSmithReviewURL",
   },
   {
     name: "Bob Johnson",
     comment: "It's decent, but there are some areas that could be improved.",
+    url: "BobJohnsonReviewURL",
   },
   {
     name: "Eva Green",
     comment: "I found the website useful and user-friendly.",
+    url: "EvaGreenReviewURL",
   },
 ];
 

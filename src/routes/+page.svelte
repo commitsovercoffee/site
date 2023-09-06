@@ -53,33 +53,35 @@
 
 	<section class="p-4">
 		<Title>Who am I ?</Title>
-		<img
-			alt={content.dp.alt}
-			src={content.dp.src}
-			class="border-2 lg:float-left m-6 p-2 h-auto transition-all duration-200 ease-linear delay-150"
-		/>
-		<div class="px-4">
-			{#each content.whoami as para}
-				<p>{para}</p>
-			{/each}
 
-			<p class="inline">
-				Feel free to reach out ! Don't feel shy. You can
-				find me on these platforms.
-				{#each content.socials as social}
-					<a
-						class="inline mx-1 hover:bg-teal-300"
-						href={social.link}
-					>
-						{social.platform}
-					</a>
+		<div class="flex">
+			<img
+				alt={content.dp.alt}
+				src={content.dp.src}
+				class="border-2 m-6 p-2 h-auto transition-all duration-200 ease-linear delay-150"
+			/>
+			<div class="px-4">
+				{#each content.whoami as para}
+					<p>{para}</p>
 				{/each}
-			</p>
+
+				<p class="inline">
+					{#each content.socials as social}
+						<a
+							class="inline mx-1 hover:bg-teal-300"
+							href={social.link}
+						>
+							{social.platform}
+						</a>
+					{/each}
+				</p>
+			</div>
 		</div>
 	</section>
 
 	<section class="p-4">
 		<Title>Reviews</Title>
+
 		<p>
 			{content.review}
 		</p>
