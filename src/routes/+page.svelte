@@ -5,6 +5,7 @@
 	import Accordion from "$lib/components/Accordion.svelte";
 	import Prompt from "$lib/components/Prompt.svelte";
 	import Button from "$lib/components/Button.svelte";
+	import Frame from "$lib/components/Frame.svelte";
 
 	let show = null;
 	const items = ["One", "Two", "Three", "Four", "Five"];
@@ -28,25 +29,14 @@
 
 	<section>
 		<Title>Who am I ?</Title>
-
 		<div class="flex">
-			<img
-				alt={content.dp.alt}
-				src={content.dp.src}
-				class="border-2 shadow-md shadow-stone-400 m-4 p-2 h-auto transition-all duration-200 ease-linear delay-150"
-			/>
-			<div class="px-4">
+			<div class="h-[400px] w-[300px] p-4">
+				<Frame src="https://picsum.photos/1920/1080" />
+			</div>
+			<div class="basis-2/3">
 				{#each content.whoami as para}
-					<p>{para}</p>
+					<p class="m-4">{para}</p>
 				{/each}
-
-				<p class="inline">
-					{#each content.socials as social}
-						<a href={social.link}>
-							{social.platform}
-						</a>
-					{/each}
-				</p>
 			</div>
 		</div>
 	</section>
