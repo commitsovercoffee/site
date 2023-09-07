@@ -6,6 +6,7 @@
 	import Prompt from "$lib/components/Prompt.svelte";
 	import Button from "$lib/components/Button.svelte";
 	import Frame from "$lib/components/Frame.svelte";
+	import Review from "$lib/components/Review.svelte";
 
 	let show = null;
 	const items = ["One", "Two", "Three", "Four", "Five"];
@@ -31,7 +32,7 @@
 		<Title>Who am I ?</Title>
 		<div class="flex">
 			<div class="h-[400px] w-[300px] p-4">
-				<Frame src="https://picsum.photos/1920/1080" />
+				<Frame src="https://picsum.photos/800" />
 			</div>
 			<div class="basis-2/3">
 				{#each content.whoami as para}
@@ -50,35 +51,7 @@
 
 		<div class="my-16">
 			{#each content.userReviews as userReview}
-				<div
-					class=" m-0 p-0 my-6 border-t-4 border-stone-800 flex even:flex-row-reverse bg-stone-200 shadow-md"
-				>
-					<img
-						class="m-0 object-cover w-1/3"
-						src="https://picsum.photos/400"
-						alt="some thing"
-					/>
-					<div class="p-4 w-2/3 font-serif">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							class="h-12 inline"
-							><title
-								>format-quote-open</title
-							><path
-								d="M10,7L8,11H11V17H5V11L7,7H10M18,7L16,11H19V17H13V11L15,7H18Z"
-							/></svg
-						>
-						<p class="m-0 px-4 text-lg">
-							{userReview.comment}
-						</p>
-						<p
-							class="m-0 mt-4 px-4 text-right"
-						>
-							{userReview.name}
-						</p>
-					</div>
-				</div>
+				<Review />
 			{/each}
 		</div>
 	</section>

@@ -13,3 +13,13 @@
 		class="h-full w-full m-0 object-cover bg-stone-200 text-center"
 	/>
 </div>
+
+<!---  USAGE
+
+Wrap this component in a div as below :
+
+<div class="h-[400px] w-[300px] p-4">
+      <Frame src="https://picsum.photos/1920/1080" />
+</div>
+
+-->
