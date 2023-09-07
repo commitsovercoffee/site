@@ -3,6 +3,8 @@
 	import Typewriter from "$lib/components/Typewriter.svelte";
 	import Title from "$lib/components/Title.svelte";
 	import Accordion from "$lib/components/Accordion.svelte";
+	import Prompt from "$lib/components/Prompt.svelte";
+	import Button from "$lib/components/Button.svelte";
 
 	let show = null;
 	const items = ["One", "Two", "Three", "Four", "Five"];
@@ -16,44 +18,15 @@
 </script>
 
 <article>
-	<section class="p-4 mt-32">
-		<h1 class="m-0 p-0 bg-stone-300 inline leading-loose uppercase">
-			{content.heading}
-		</h1>
-		<p class="h-16">
-			<Typewriter messages={content.remarks} />
-		</p>
-
-		<p>
-			{content.intro}
-		</p>
-
-		<p />
-
-		<div class="my-8 font-bold">
-			<a
-				href="mailto:commitsovercoffee@gmail.com?subject=I%20have%20an%20app%20idea!&body=I'm%20interested%20in%20discussing%20a%20potential%20project...%20 "
-			>
-				<button
-					class="no-underline border-2 p-4 m-4 rounded-2xl border-stone-800 bg-stone-300 hover:bg-stone-800 hover:text-stone-300 transition-colors duration-200 ease-in font-black"
-				>
-					Let's Talk!
-				</button>
-			</a>
-
-			<a
-				href="mailto:commitsovercoffee@gmail.com?subject=I%20have%20an%20app%20idea!&body=I'm%20interested%20in%20discussing%20a%20potential%20project...%20 "
-			>
-				<button
-					class="no-underline p-4 m-4 rounded-2xl border-stone-800 bg-stone-300 hover:bg-stone-800 hover:text-stone-300 transition-colors duration-200 ease-in"
-				>
-					Let's Not Talk!
-				</button>
-			</a>
-		</div>
+	<section>
+		<Prompt>{content.heading}</Prompt>
+		<Typewriter messages={content.remarks} />
+		<p>{content.intro}</p>
+		<Button type="primary">Let's Talk.</Button>
+		<Button type="secondary">Let's not Talk.</Button>
 	</section>
 
-	<section class="p-4">
+	<section>
 		<Title>Who am I ?</Title>
 
 		<div class="flex">

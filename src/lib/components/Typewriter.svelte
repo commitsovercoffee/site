@@ -40,13 +40,10 @@
 	}
 </script>
 
-<div class="inline">
+<div class="h-32">
 	{#key i}
-		<span
-			class="font-serif italic text-xl"
-			in:typewriter={{ speed: 7 }}
-		>
+		<p class="text-2xl" in:typewriter={{ speed: 7 }}>
 			{messages[i] || ""}
-		</span>
+		</p>
 	{/key}
 </div>
