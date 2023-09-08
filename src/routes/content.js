@@ -23,8 +23,7 @@ export const dp = {
 };
 
 export const whoami = [
-  "Hello ! I'm Sourav Singh.",
-  "An Independent software developer with 4 years of experience. Currently building learning solutions with Quest Alliance. Working remotely from Ranchi, India.",
+  "Hello ! I'm Sourav Singh. An Independent software developer with 4 years of experience. Currently building learning solutions with Quest Alliance. Working remotely from Ranchi, India.",
   "When I'm not tinkering, I also sketch, write and youtube sometimes :D",
 ];
 
@@ -53,22 +52,22 @@ export const userReviews = [
     name: "John Doe",
     comment:
       "Great website! Easy to navigate and find the information I needed.",
-    url: "JohnDoeReviewURL",
+    src: "https://picsum.photos/240",
   },
   {
     name: "Alice Smith",
     comment: "I love this website! It's so well-designed and informative.",
-    url: "AliceSmithReviewURL",
+    src: "https://picsum.photos/240",
   },
   {
     name: "Bob Johnson",
     comment: "It's decent, but there are some areas that could be improved.",
-    url: "BobJohnsonReviewURL",
+    src: "https://picsum.photos/240",
   },
   {
     name: "Eva Green",
     comment: "I found the website useful and user-friendly.",
-    url: "EvaGreenReviewURL",
+    src: "https://picsum.photos/240",
   },
 ];
 

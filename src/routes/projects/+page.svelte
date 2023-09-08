@@ -3,16 +3,15 @@
 	import * as content from "./content";
 </script>
 
-<section class="py-4">
+<section>
 	<Title>Projects</Title>
-
-	<p class="my-8">
+	<p>
 		{content.intro}
 	</p>
 
 	<div class="flex flex-wrap justify-center">
 		{#each content.projects as project}
-			<div class="p-4 m-2 rounded-xl shadow-md bg-slate-100">
+			<div class="p-4 m-4 rounded-xl shadow-md bg-slate-100">
 				<p>
 					<a
 						href="/"

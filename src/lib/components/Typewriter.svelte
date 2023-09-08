@@ -40,9 +40,9 @@
 	}
 </script>
 
-<div class="h-32">
+<div class="h-20">
 	{#key i}
-		<p class="text-2xl" in:typewriter={{ speed: 7 }}>
+		<p in:typewriter={{ speed: 7 }}>
 			{messages[i] || ""}
 		</p>
 	{/key}

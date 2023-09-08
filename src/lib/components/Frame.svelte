@@ -1,25 +1,12 @@
 <script>
-	export let src = "";
-	export let alt = "";
+	// Use only square images.
+	export let src = "https://picsum.photos/280";
+	export let alt = "Image Desc";
 </script>
 
-<div
-	class="m-0 p-2 h-4/5 w-full border-2 border-stone-800 shadow-md shadow-stone-400"
->
-	<img
-		{src}
-		{alt}
-		loading="lazy"
-		class="h-full w-full m-0 object-cover bg-stone-200 text-center"
-	/>
-</div>
-
-<!---  USAGE
-
-Wrap this component in a div as below :
-
-<div class="h-[400px] w-[300px] p-4">
-      <Frame src="https://picsum.photos/1920/1080" />
-</div>
-
--->
+<img
+	loading="lazy"
+	{src}
+	{alt}
+	class="my-16 mx-auto rounded-full p-2 border-2 border-stone-800 object-cover shadow-md shadow-stone-600"
+/>

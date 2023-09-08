@@ -1,21 +1,26 @@
 <script>
 	import { slide } from "svelte/transition";
 
-	export let i = false;
-	export let show;
+	export let i = -1;
+	export let show = -1;
+
 	export let showCollapse;
-	export let label;
-	export let content;
+	export let label = "";
+	export let content = "";
+
+	let buttonStyle =
+		"p-4 border border-stone-300 w-full text-left transition-color duration-200 ease-in-out hover:bg-stone-300";
 </script>
 
-<div
-	class="p-4 border border-gray-300 transition-all duration-200 ease-in-out collapse__header hover:bg-stone-300"
+<button
+	class=" {buttonStyle} {show === i && 'bg-stone-300'}"
 	on:click={showCollapse(i)}
 >
 	{label}
-</div>
+</button>
+
 {#if show === i}
-	<div class="p-4 bg-stone-200 collapse__body" transition:slide>
+	<div class="p-4 bg-stone-200" transition:slide>
 		{content}
 	</div>
 {/if}

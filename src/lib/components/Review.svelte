@@ -1,22 +1,24 @@
 <script>
-	export let src = "https://picsum.photos/900";
-	export let alt = "Image Desc.";
+	export let src = "";
+	export let comment = "";
+	export let name = "";
+	const alt = name;
 </script>
 
 <div
-	class="my-4 flex even:flex-row-reverse border-t-4 border-stone-800 bg-stone-200 shadow-md"
+	class="my-4 h-4/5 flex even:flex-row-reverse border-t-4 border-stone-800 bg-stone-200 shadow-md"
 >
-	<div class="m-0 w-full shadow-md shadow-stone-400 basis-1/2">
+	<div class="m-0 h-60 shadow-md shadow-stone-300 basis-1/2">
 		<img
 			loading="lazy"
 			{src}
 			{alt}
-			class="h-full w-full m-0 object-cover bg-stone-200 text-center"
+			class="h-full w-full m-0 object-cover bg-stone-400 text-center"
 		/>
 	</div>
 
 	<div class="basis-2/3 p-4 overflow-y-scroll">
-		<div class="p-2 font-serif">
+		<div class="p-2 font-sans">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -36,15 +38,10 @@
 			>
 
 			<p class="m-0 my-2 py-2">
-				Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Assumenda sit amet numquam
-				eius quia asperiores magnam voluptatum dolore
-				laudantium, nemo repellat distinctio dolor
-				exercitationem sunt, nobis magni voluptatibus
-				soluta aperiam?
+				{comment}
 			</p>
 
-			<p class="m-0 text-right">Lorem ipsum dolor.</p>
+			<p class="m-0 text-right font-semibold">- {name}.</p>
 		</div>
 	</div>
 </div>
