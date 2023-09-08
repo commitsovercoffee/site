@@ -1,7 +1,6 @@
 <script>
 	import Title from "$lib/components/Title.svelte";
 	import * as content from "./content";
-	import Carousel from "$lib/components/Carousel.svelte";
 </script>
 
 <article>
