@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="my-4 h-4/5 flex even:flex-row-reverse border-t-4 border-stone-800 bg-stone-200 shadow-md"
+	class="my-4 h-4/5 flex even:flex-row-reverse border-t-4 border-stone-800 bg-stone-200 shadow-md shadow-stone-300"
 >
 	<div class="m-0 h-60 shadow-md shadow-stone-300 basis-1/2">
 		<img

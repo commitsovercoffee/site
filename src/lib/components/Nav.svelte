@@ -10,7 +10,7 @@
 		</p>
 	</a>
 	<div class=" flex">
-		<div class="m-2 flex">
+		<div class="m-2 flex flex-wrap">
 			{#each navlinks as link}
 				<a
 					href={link === "home"
