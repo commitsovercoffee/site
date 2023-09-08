@@ -3,7 +3,7 @@
 	export let href = "";
 
 	const baseStyle =
-		"my-4 mr-4 p-4 rounded-2xl border-2 hover:bg-stone-800 transition-colors duration-200 ease-in no-underline hover:prose hover:prose-invert";
+		"my-8 mr-8 p-4 rounded-2xl border-2 hover:bg-stone-800 transition-colors duration-200 ease-in no-underline hover:prose hover:prose-invert";
 </script>
 
 <a {href}>

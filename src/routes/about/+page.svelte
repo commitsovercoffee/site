@@ -3,51 +3,58 @@
 	import * as content from "./content";
 </script>
 
-<section class="p-4">
-	<Title>ABout Me</Title>
+<article>
+	<section>
+		<Title>About Me</Title>
 
-	<section class="flex flex-wrap justify-center">
-		{#each content.photos as photo}
-			<div
-				class="h-min m-2 p-0 shadow-lg odd:-rotate-2 even:rotate-2"
-			>
+		<div class="m-0 p-0 flex flex-wrap justify-center">
+			{#each content.photos as photo}
 				<img
-					alt={photo.alt}
+					class="h-48 w-48 min-h-200 p-2 m-2 border-8 border-stone-800 bg-stone-200 first:rotate-3"
 					src={photo.src}
-					class="m-0 p-4 w-[200px] h-auto transition-all duration-200 ease-linear delay-150"
+					alt=""
 				/>
-			</div>
-		{/each}
+			{/each}
+		</div>
+
+		<div class="mt-16">
+			{#each content.about as para}
+				<p>
+					{para}
+				</p>
+			{/each}
+		</div>
 	</section>
 
-	{#each content.about as para}
+	<section>
+		<Title>Random Facts</Title>
+
+		<ul>
+			{#each content.facts as fact}
+				<li>
+					{fact}
+				</li>
+			{/each}
+		</ul>
+	</section>
+
+	<section>
+		<Title>Favorites</Title>
+
+		<ul>
+			{#each Object.entries(content.favorites) as [category, favorite]}
+				<li>
+					<span class="font-bold">{category}</span
+					>: {favorite}
+				</li>
+			{/each}
+		</ul>
+	</section>
+
+	<section>
+		<Title>Contact</Title>
 		<p>
-			{para}
+			{content.contact}
 		</p>
-	{/each}
-
-	<Title>Random Facts</Title>
-
-	<ul>
-		{#each content.facts as fact}
-			<li>
-				{fact}
-			</li>
-		{/each}
-	</ul>
-
-	<Title>Favorites</Title>
-
-	<ul>
-		{#each Object.entries(content.favorites) as [category, favorite]}
-			<li>
-				<span class="font-bold">{category}</span>: {favorite}
-			</li>
-		{/each}
-	</ul>
-
-	<Title>Contact</Title>
-	<p>
-		{content.contact}
-	</p>
-</section>
+	</section>
+</article>

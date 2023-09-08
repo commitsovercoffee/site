@@ -10,6 +10,6 @@
 
 <Nav />
 <Cursor />
-<main>
+<main class="mx-4">
 	<slot />
 </main>

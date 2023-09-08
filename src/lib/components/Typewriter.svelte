@@ -40,7 +40,7 @@
 	}
 </script>
 
-<div class="h-20">
+<div class="m-0 h-20">
 	{#key i}
 		<p in:typewriter={{ speed: 7 }}>
 			{messages[i] || ""}

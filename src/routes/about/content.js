@@ -3,19 +3,19 @@
 export const photos = [
   {
     alt: "Image 1",
-    src: `https://picsum.photos/200?random=1`,
+    src: `https://picsum.photos/192?random=1`,
   },
   {
     alt: "Image 2",
-    src: `https://picsum.photos/200?random=2`,
+    src: `https://picsum.photos/192?random=2`,
   },
   {
     alt: "Image 3",
-    src: `https://picsum.photos/200?random=3`,
+    src: `https://picsum.photos/192?random=3`,
   },
   {
     alt: "Image 4",
-    src: `https://picsum.photos/200?random=4`,
+    src: `https://picsum.photos/192?random=4`,
   },
 ];
 

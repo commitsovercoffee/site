@@ -16,7 +16,7 @@
 					href={link === "home"
 						? "/"
 						: `/${link}`}
-					class="m-2 py-2 px-4 font-black uppercase no-underline rounded-xl border-2 border-stone-200 hover:bg-stone-800 hover:prose hover:prose-invert transition-color duration-200 ease-in-out delay-50"
+					class="m-2 py-2 px-4 font-black uppercase no-underline rounded-xl border-2 border-stone-200 hover:border-stone-800 hover:bg-stone-800 hover:prose hover:prose-invert transition-color duration-200 ease-in-out delay-50"
 				>
 					{link}
 				</a>

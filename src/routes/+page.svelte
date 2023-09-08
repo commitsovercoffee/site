@@ -21,22 +21,19 @@
 	};
 </script>
 
-<article class="px-4">
-	<section>
-		<Spacer size="16" />
+<article>
+	<section class="my-32 bg-tal-200">
 		<Prompt>{content.heading}</Prompt>
 		<Typewriter messages={content.remarks} />
 		<p>{content.intro}</p>
-		<div class="flex">
+		<div class="flex mt-16 mb-32">
 			<Button type="primary">Let's Talk.</Button>
 			<Button type="secondary">Let's Not Talk.</Button>
 		</div>
-		<Spacer size="16" />
 	</section>
 
 	<section>
 		<Title>Who am I ?</Title>
-
 		<Frame />
 		{#each content.whoami as para}
 			<p>{para}</p>
@@ -48,10 +45,10 @@
 		<p>
 			{content.review}
 		</p>
-		<div class="my-16">
+		<div class="mt-16 mb-64">
 			{#each content.userReviews as userReview}
 				<Review
-					src={userReview.src}
+					link={userReview.link}
 					name={userReview.name}
 					comment={userReview.comment}
 				/>
@@ -61,18 +58,20 @@
 
 	<section>
 		<Title>Approach</Title>
-		<p class="my-8">
+		<p>
 			{content.approach}
 		</p>
-		{#each content.stages as stage, i}
-			<Accordion
-				{i}
-				{show}
-				{showCollapse}
-				label={stage.phase}
-				content={stage.description}
-			/>
-		{/each}
+		<div class="mt-16 mb-64">
+			{#each content.stages as stage, i}
+				<Accordion
+					{i}
+					{show}
+					{showCollapse}
+					label={stage.phase}
+					content={stage.description}
+				/>
+			{/each}
+		</div>
 	</section>
 
 	<section>
@@ -80,7 +79,7 @@
 		<p>
 			{content.skill}
 		</p>
-		<div class="flex flex-wrap">
+		<div class="mt-16 mb-64 flex flex-wrap">
 			{#each content.skills as skill}
 				<Tag>
 					{skill.label}
@@ -91,15 +90,11 @@
 
 	<section>
 		<Title>Featured Blogs</Title>
-		<p class="my-32">
+		<p>
 			{content.featuredBlog}
 		</p>
-		<div class=" font-serif">
-			{#each featuredPosts as post}
-				<Post />
-			{/each}
+		<div class="mt-16 mb-64">
+			<Post posts={featuredPosts} />
 		</div>
 	</section>
-
-	<Title>END</Title>
 </article>
