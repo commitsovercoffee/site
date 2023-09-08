@@ -1,13 +1,14 @@
 <script>
 	import Title from "$lib/components/Title.svelte";
 	import * as content from "./content";
+	import Carousel from "$lib/components/Carousel.svelte";
 </script>
 
 <article>
 	<section>
-		<Title>About Me</Title>
-
-		<div class="m-0 p-0 flex flex-wrap justify-center">
+		<div
+			class="m-0 p-0 w-full flex justify-center overflow-x-scroll"
+		>
 			{#each content.photos as photo}
 				<img
 					class="h-48 w-48 min-h-200 p-2 m-2 border-8 border-stone-800 bg-stone-200 first:rotate-3"

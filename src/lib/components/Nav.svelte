@@ -2,25 +2,17 @@
 	let navlinks = ["home", "projects", "blog", "about"];
 </script>
 
-<div class="mt-8 mb-16">
-	<a href="/" class="p-2 no-underline flex align-bottom">
-		<img class="m-0 p-2 h-16" src="/favicon.png" alt="" />
-		<p class="m-0 p-2 pt-4 italic font-serif text-4xl">
-			Commits Over Coffee
-		</p>
-	</a>
-	<div class=" flex">
-		<div class="m-2 flex flex-wrap">
-			{#each navlinks as link}
-				<a
-					href={link === "home"
-						? "/"
-						: `/${link}`}
-					class="m-2 py-2 px-4 font-black uppercase no-underline rounded-xl border-2 border-stone-200 hover:border-stone-800 hover:bg-stone-800 hover:prose hover:prose-invert transition-color duration-200 ease-in-out delay-50"
-				>
-					{link}
-				</a>
-			{/each}
-		</div>
-	</div>
+<p
+	class="font-serif font-light italic text-3xl text-stone-800 md:text-4xl underline underline-offset-8"
+>
+	<img class="m-2 p-2 inline h-14" src="favicon.png" alt="" />
+	Commits Over Coffee
+</p>
+<div>
+	{#each navlinks as link}
+		<a
+			class="m-2 border-2 border-stone-200 hover:border-stone-800 rounded-xl p-2 no-underline uppercase hover:bg-stone-800 hover:prose hover:prose-invert transition-colors duration-200 ease-in-out"
+			href={link === "home" ? "/" : `/${link}`}>{link}</a
+		>
+	{/each}
 </div>

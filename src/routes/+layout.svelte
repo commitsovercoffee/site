@@ -8,8 +8,8 @@
 	<title>Commits Over Coffee</title>
 </svelte:head>
 
-<Nav />
 <Cursor />
-<main class="mx-4">
+<Nav />
+<main class="my-16 md:my-32 mx-4 p-2">
 	<slot />
 </main>

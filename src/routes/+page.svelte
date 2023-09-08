@@ -9,7 +9,6 @@
 	import Review from "$lib/components/Review.svelte";
 	import Tag from "$lib/components/Tag.svelte";
 	import Post from "$lib/components/Post.svelte";
-	import Spacer from "$lib/components/Spacer.svelte";
 
 	export let data;
 	let featuredPosts = data.featuredPosts;
@@ -22,11 +21,11 @@
 </script>
 
 <article>
-	<section class="my-32 bg-tal-200">
+	<section>
 		<Prompt>{content.heading}</Prompt>
 		<Typewriter messages={content.remarks} />
 		<p>{content.intro}</p>
-		<div class="flex mt-16 mb-32">
+		<div class="flex">
 			<Button type="primary">Let's Talk.</Button>
 			<Button type="secondary">Let's Not Talk.</Button>
 		</div>

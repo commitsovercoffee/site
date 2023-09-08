@@ -29,8 +29,6 @@
 
 <article>
 	<section>
-		<Title>Blogs</Title>
-
 		<p>
 			Welcome to my blog, where I share my thoughts,
 			experiences, and passions. Explore topics close to my
@@ -41,7 +39,7 @@
 	<section>
 		{#each [...new Set(data.posts.flatMap((p) => p.meta.tags))] as tag}
 			<button
-				class="m-2 rounded-xl border-2 border-stone-300 px-4 py-2 hover:border-stone-800 hover:bg-stone-300 transition-colors ease-in-out duration-200
+				class="m-2 rounded-xl border-2 border-stone-300 px-2 py-1 hover:border-stone-800 hover:bg-stone-300 transition-colors ease-in-out duration-200
 
 				{selectedTags.has(tag) && 'bg-stone-300'}"
 				on:click={() => updateFilterPosts(tag)}
