@@ -9,7 +9,7 @@
 		const interval = setInterval(() => {
 			i += 1;
 			i %= messages.length;
-		}, 5000);
+		}, 3000);
 
 		return () => {
 			clearInterval(interval);

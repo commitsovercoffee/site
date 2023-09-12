@@ -1,4 +1,5 @@
 <script>
+	import { page } from "$app/stores";
 	import "../app.css";
 	import Nav from "$lib/components/Nav.svelte";
 	import Cursor from "$lib/components/Cursor.svelte";
