@@ -33,7 +33,11 @@
 
 	<section>
 		<Title>Who am I ?</Title>
-		<Frame />
+		<img
+			src="https://picsum.photos/200"
+			alt="a tabletop with tea"
+			class="h-48 md:h-72 w-48 md:w-72 bg-stone-300 my-16 mx-auto rounded-full p-2 border-2 border-stone-800 object-cover shadow-md shadow-stone-600"
+		/>
 		{#each content.whoami as para}
 			<p>{para}</p>
 		{/each}

@@ -23,7 +23,7 @@
 		</p>
 	</a>
 
-	<div class="flex">
+	<div class="w-fit">
 		{#each navlinks as link}
 			{#if link === "home"}
 				<a
