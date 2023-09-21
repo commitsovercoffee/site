@@ -1,5 +1,5 @@
 <div
-	class="mt-32 mb-16 h-4 border-b-2 border-dashed border-stone-400 text-center"
+	class="mt-28 mb-20 h-4 border-b-2 border-dashed border-stone-400 text-center"
 >
 	<h2 class="p-4 bg-stone-50 inline uppercase"><slot /></h2>
 </div>

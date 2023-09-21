@@ -1,5 +1,4 @@
 <script>
-	import Title from "$lib/components/Title.svelte";
 	import * as content from "./content";
 
 	const tagStyle =
@@ -7,7 +6,6 @@
 </script>
 
 <section>
-	<Title>Projects</Title>
 	<p>
 		{content.intro}
 	</p>

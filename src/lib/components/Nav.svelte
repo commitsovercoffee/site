@@ -1,26 +1,62 @@
 <script>
+	import { page } from "$app/stores";
 	let navlinks = ["home", "projects", "blog", "about"];
+
+	$: currentURL =
+		$page.url.pathname.split("/").pop() || $page.url.pathname;
+
+	const navStyle =
+		"m-2 border-2 border-stone-200 rounded-xl p-2 no-underline uppercase transition-all duration-200 ease-in-out";
 </script>
 
-<div class="mt-8 mb-16">
-	<a href="/" class="p-2 no-underline flex align-bottom">
-		<img class="m-0 p-2 h-16" src="/favicon.png" alt="" />
-		<p class="m-0 p-2 pt-4 italic font-serif text-4xl">
+<section>
+	<a href="/" class="no-underline">
+		<p
+			class="font-serif font-light italic text-3xl text-stone-800 md:text-4xl underline underline-offset-8"
+		>
+			<img
+				class="m-2 p-2 inline h-14"
+				src="favicon.png"
+				alt=""
+			/>
 			Commits Over Coffee
 		</p>
 	</a>
-	<div class=" flex">
-		<div class="m-2 flex flex-wrap">
-			{#each navlinks as link}
+
+	<div class="w-fit">
+		{#each navlinks as link}
+			{#if link === "home"}
 				<a
-					href={link === "home"
-						? "/"
-						: `/${link}`}
-					class="m-2 py-2 px-4 font-black uppercase no-underline rounded-xl border-2 border-stone-200 hover:border-stone-800 hover:bg-stone-800 hover:prose hover:prose-invert transition-color duration-200 ease-in-out delay-50"
+					class={`${navStyle} ${
+						currentURL === "/" &&
+						"border-stone-800 bg-stone-800 prose prose-invert"
+					}`}
+					href={`/`}
 				>
 					{link}
 				</a>
-			{/each}
-		</div>
+			{:else if link === currentURL}
+				<a
+					class={`${navStyle} ${
+						link === currentURL &&
+						"border-stone-800 bg-stone-800 prose prose-invert"
+					}`}
+					href={link === "home"
+						? "/"
+						: `/${link}`}
+				>
+					{link}
+				</a>
+			{:else}
+				<a
+					class={`${navStyle} hover:bg-stone-800 hover:prose hover:prose-invert hover:border-stone-800`}
+					href={link === "home"
+						? "/"
+						: `/${link}`}
+				>
+					{link}
+				</a>
+			{/if}
+		{/each}
 	</div>
-</div>
+</section>

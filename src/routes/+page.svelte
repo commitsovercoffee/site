@@ -9,7 +9,6 @@
 	import Review from "$lib/components/Review.svelte";
 	import Tag from "$lib/components/Tag.svelte";
 	import Post from "$lib/components/Post.svelte";
-	import Spacer from "$lib/components/Spacer.svelte";
 
 	export let data;
 	let featuredPosts = data.featuredPosts;
@@ -22,11 +21,11 @@
 </script>
 
 <article>
-	<section class="my-32 bg-tal-200">
+	<section>
 		<Prompt>{content.heading}</Prompt>
 		<Typewriter messages={content.remarks} />
 		<p>{content.intro}</p>
-		<div class="flex mt-16 mb-32">
+		<div class="flex">
 			<Button type="primary">Let's Talk.</Button>
 			<Button type="secondary">Let's Not Talk.</Button>
 		</div>
@@ -34,7 +33,11 @@
 
 	<section>
 		<Title>Who am I ?</Title>
-		<Frame />
+		<img
+			src="https://picsum.photos/200"
+			alt="a tabletop with tea"
+			class="h-48 md:h-72 w-48 md:w-72 bg-stone-300 my-16 mx-auto rounded-full p-2 border-2 border-stone-800 object-cover shadow-md shadow-stone-600"
+		/>
 		{#each content.whoami as para}
 			<p>{para}</p>
 		{/each}

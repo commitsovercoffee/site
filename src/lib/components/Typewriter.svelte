@@ -9,7 +9,7 @@
 		const interval = setInterval(() => {
 			i += 1;
 			i %= messages.length;
-		}, 5000);
+		}, 3000);
 
 		return () => {
 			clearInterval(interval);
@@ -40,7 +40,7 @@
 	}
 </script>
 
-<div class="m-0 h-20">
+<div class="m-0 h-16">
 	{#key i}
 		<p in:typewriter={{ speed: 7 }}>
 			{messages[i] || ""}
