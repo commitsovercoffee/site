@@ -3,6 +3,11 @@ export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {
+      fontFamily: {
+        plex_serif: "'IBM Plex Serif', serif ",
+        plex_sans: "'IBM Plex Sans', sans-serif ",
+        plex_mono: "'IBM Plex Mono', mono ",
+      },
       keyframes: {
         typing: {
           "0%": {

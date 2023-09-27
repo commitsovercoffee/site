@@ -26,8 +26,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@fontsource-variable/lora": "^5.0.9",
-    "@fontsource-variable/montserrat": "^5.0.9",
-    "@fontsource/martel": "^5.0.8"
+    "@fontsource/ibm-plex-mono": "^5.0.8",
+    "@fontsource/ibm-plex-sans": "^5.0.12",
+    "@fontsource/ibm-plex-serif": "^5.0.8"
   }
 }

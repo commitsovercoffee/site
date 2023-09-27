@@ -6,13 +6,13 @@
 		$page.url.pathname.split("/").pop() || $page.url.pathname;
 
 	const navStyle =
-		"m-2 border-2 border-stone-200 rounded-xl p-2 no-underline uppercase transition-all duration-200 ease-in-out";
+		"m-2 border-2 border-stone-200 rounded-xl py-4 px-6 no-underline uppercase transition-all duration-200 ease-in-out";
 </script>
 
 <section>
 	<a href="/" class="no-underline">
 		<p
-			class="font-serif font-light italic text-3xl text-stone-800 md:text-4xl underline underline-offset-8"
+			class="font-plex_serif font-semibold text-3xl text-stne-800 md:text-4xl"
 		>
 			<img
 				class="m-2 p-2 inline h-14"
@@ -23,7 +23,7 @@
 		</p>
 	</a>
 
-	<div class="w-fit">
+	<div class="flex w-fit font-plex_mono font-medium">
 		{#each navlinks as link}
 			{#if link === "home"}
 				<a

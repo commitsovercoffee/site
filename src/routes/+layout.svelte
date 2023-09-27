@@ -3,6 +3,11 @@
 	import "../app.css";
 	import Nav from "$lib/components/Nav.svelte";
 	import Cursor from "$lib/components/Cursor.svelte";
+
+	// fonts
+	import "@fontsource/ibm-plex-serif";
+	import "@fontsource/ibm-plex-sans";
+	import "@fontsource/ibm-plex-mono";
 </script>
 
 <svelte:head>
