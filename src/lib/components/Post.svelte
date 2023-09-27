@@ -7,12 +7,12 @@
 		<dt>
 			<a
 				href={path}
-				class="text-xl font-sans underline hover:no-underline decoration-2 underline-offset-2"
+				class="text-xl text-neutral-200 font-playfair underline hover:no-underline decoration-2 underline-offset-4"
 			>
 				{meta.title}
 			</a>
 		</dt>
-		<dd class="ml-8 text-lg font-serif">{meta.desc}</dd>
+		<dd class="ml-8 font-plex_sans">{meta.desc}</dd>
 		<hr />
 	{/each}
 </dl>

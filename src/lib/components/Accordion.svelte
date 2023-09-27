@@ -9,18 +9,18 @@
 	export let content = "";
 
 	let buttonStyle =
-		"p-4 border border-stone-300 w-full text-left transition-color duration-200 ease-in-out hover:bg-stone-300";
+		"p-4 border border-neutral-800 w-full text-left transition-color duration-200 ease-in-out hover:bg-neutral-800";
 </script>
 
 <button
-	class=" {buttonStyle} {show === i && 'bg-stone-300'}"
+	class=" {buttonStyle} {show === i && 'bg-neutral-800'}"
 	on:click={showCollapse(i)}
 >
 	{label}
 </button>
 
 {#if show === i}
-	<div class="p-4 bg-stone-200" transition:slide>
+	<div class="p-4 bg-neutral-900" transition:slide>
 		{content}
 	</div>
 {/if}

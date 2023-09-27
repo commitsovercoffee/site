@@ -1,13 +1,9 @@
 <script>
-	export let link = "";
 	export let comment = "";
 	export let name = "";
-	const alt = name;
 </script>
 
-<div
-	class="my-8 px-4 py-2 border-t-4 border-stone-800 bg-stone-200 shadow-md shadow-stone-400"
->
+<div class="my-8 px-4 py-2 border-t-4 border-neutral-200 bg-neutral-800">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="24"
@@ -25,6 +21,6 @@
 			d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
 		/></svg
 	>
-	<p class="font-serif">{comment}</p>
-	<p class="text-right font-semibold">- {name}</p>
+	<p class="font-plex_sans">{comment}</p>
+	<p class="text-right font-caveat">- {name}</p>
 </div>

@@ -40,7 +40,7 @@
 	}
 </script>
 
-<div class="m-0 h-16 font-plex_serif font-semibold">
+<div class="m-0 h-16 font-plex_serif">
 	{#key i}
 		<p in:typewriter={{ speed: 7 }}>
 			{messages[i] || ""}

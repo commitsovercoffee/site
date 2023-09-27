@@ -39,9 +39,9 @@
 	<section>
 		{#each [...new Set(data.posts.flatMap((p) => p.meta.tags))] as tag}
 			<button
-				class="m-2 rounded-xl border-2 border-stone-300 px-2 py-1 hover:border-stone-800 hover:bg-stone-300 transition-colors ease-in-out duration-200
+				class="m-2 rounded-xl border-2 border-neutral-800 px-2 py-1 hover:bg-neutral-800 transition-colors ease-in-out duration-200
 
-				{selectedTags.has(tag) && 'bg-stone-300'}"
+				{selectedTags.has(tag) && 'bg-neutral-800'}"
 				on:click={() => updateFilterPosts(tag)}
 			>
 				{tag}

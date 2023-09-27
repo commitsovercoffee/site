@@ -7,7 +7,11 @@
 	import "@fontsource/ibm-plex-serif";
 	import "@fontsource/ibm-plex-sans";
 	import "@fontsource/ibm-plex-mono";
-	import "@fontsource-variable/caveat";
+
+	import "@fontsource-variable/caveat"; // handwriting
+	import "@fontsource-variable/lora"; // sans
+	import "@fontsource-variable/playfair-display"; // serif
+	import "@fontsource-variable/azeret-mono"; // mono
 </script>
 
 <svelte:head>

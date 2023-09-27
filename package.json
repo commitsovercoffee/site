@@ -26,7 +26,10 @@
   },
   "type": "module",
   "dependencies": {
+    "@fontsource-variable/azeret-mono": "^5.0.13",
     "@fontsource-variable/caveat": "^5.0.8",
+    "@fontsource-variable/lora": "^5.0.9",
+    "@fontsource-variable/playfair-display": "^5.0.13",
     "@fontsource/ibm-plex-mono": "^5.0.8",
     "@fontsource/ibm-plex-sans": "^5.0.12",
     "@fontsource/ibm-plex-serif": "^5.0.8"

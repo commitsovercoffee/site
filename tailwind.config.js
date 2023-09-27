@@ -8,6 +8,8 @@ export default {
         plex_sans: "'IBM Plex Sans', sans-serif ",
         plex_mono: "'IBM Plex Mono', mono ",
         caveat: "'Caveat Variable', sans-serif ",
+        playfair: "'Playfair Display Variable', sans-serif ",
+        azeret: "'Azeret Mono Variable', sans-serif ",
       },
       keyframes: {
         typing: {

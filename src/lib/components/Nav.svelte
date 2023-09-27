@@ -11,7 +11,7 @@
 
 <section class="text-neutral-200 prose prose-invert">
 	<a href="/" class="no-underline">
-		<p class="font-plex_serif font-black text-3xl md:text-4xl">
+		<p class="font-playfair text-3xl md:text-4xl">
 			<img
 				class="m-2 p-2 inline h-14"
 				src="favicon.png"
@@ -21,9 +21,7 @@
 		</p>
 	</a>
 
-	<div
-		class="flex w-fit font-plex_mono font-medium uppercase tracking-widest"
-	>
+	<div class="flex w-fit font-plex_serif uppercase tracking-widest">
 		{#each navlinks as link}
 			{#if link === "home"}
 				<a

@@ -1,5 +1,5 @@
 <button
-	class="m-2 rounded-xl border-2 px-4 py-2 hover:border-stone-800 hover:bg-stone-300 transition-colors ease-in-out duration-200"
+	class="font-plex_mono m-2 border-2 border-neutral-800 hover:bg-neutral-800 rounded-xl px-4 py-2 no-underline uppercase transition-all duration-200 ease-in-out"
 >
 	<slot />
 </button>
