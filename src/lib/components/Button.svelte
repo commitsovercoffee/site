@@ -3,18 +3,18 @@
 	export let href = "";
 
 	const baseStyle =
-		"p-4 m-2 rounded-2xl border-2 hover:bg-stone-800 transition-colors duration-200 ease-in no-underline hover:prose hover:prose-invert";
+		"font-plex_mono m-2 rounded-xl p-4 font-bold no-underline uppercase transition-all duration-200 ease-in-out";
 </script>
 
 <a {href}>
 	{#if type === "primary"}
-		<button class={`${baseStyle} bg-stone-300 border-stone-800`}>
+		<button
+			class={`${baseStyle} bg-neutral-800 text-neutral-200 hover:shadow-md hover:shadow-neutral-600`}
+		>
 			<slot />
 		</button>
 	{:else if type === "secondary"}
-		<button
-			class={`${baseStyle} bg-stone-200 border-stone-200 hover:border-stone-800`}
-		>
+		<button class={`${baseStyle} bg-neutral-200 hover:bg-sky-300`}>
 			<slot />
 		</button>
 	{/if}

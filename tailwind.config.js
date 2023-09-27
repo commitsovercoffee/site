@@ -7,6 +7,7 @@ export default {
         plex_serif: "'IBM Plex Serif', serif ",
         plex_sans: "'IBM Plex Sans', sans-serif ",
         plex_mono: "'IBM Plex Mono', mono ",
+        caveat: "'Caveat Variable', sans-serif ",
       },
       keyframes: {
         typing: {

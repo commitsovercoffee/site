@@ -5,7 +5,6 @@
 	import Accordion from "$lib/components/Accordion.svelte";
 	import Prompt from "$lib/components/Prompt.svelte";
 	import Button from "$lib/components/Button.svelte";
-	import Frame from "$lib/components/Frame.svelte";
 	import Review from "$lib/components/Review.svelte";
 	import Tag from "$lib/components/Tag.svelte";
 	import Post from "$lib/components/Post.svelte";
@@ -27,7 +26,6 @@
 		<p>{content.intro}</p>
 		<div class="flex">
 			<Button type="primary">Let's Talk.</Button>
-			<Button type="secondary">Let's Not Talk.</Button>
 		</div>
 	</section>
 

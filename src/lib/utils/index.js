@@ -11,7 +11,7 @@ export const fetchMarkdownPosts = async () => {
         meta: metadata,
         path: postPath,
       };
-    })
+    }),
   );
 
   return allPosts;

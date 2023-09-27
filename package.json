@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@fontsource-variable/caveat": "^5.0.8",
     "@fontsource/ibm-plex-mono": "^5.0.8",
     "@fontsource/ibm-plex-sans": "^5.0.12",
     "@fontsource/ibm-plex-serif": "^5.0.8"

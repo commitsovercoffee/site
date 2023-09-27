@@ -6,14 +6,12 @@
 		$page.url.pathname.split("/").pop() || $page.url.pathname;
 
 	const navStyle =
-		"m-2 border-2 border-stone-200 rounded-xl py-4 px-6 no-underline uppercase transition-all duration-200 ease-in-out";
+		"font-plex_mono m-2 border-2 border-neutral-800 rounded-xl px-4 py-2 no-underline uppercase transition-all duration-200 ease-in-out";
 </script>
 
-<section>
+<section class="text-neutral-200 prose prose-invert">
 	<a href="/" class="no-underline">
-		<p
-			class="font-plex_serif font-semibold text-3xl text-stne-800 md:text-4xl"
-		>
+		<p class="font-plex_serif font-black text-3xl md:text-4xl">
 			<img
 				class="m-2 p-2 inline h-14"
 				src="favicon.png"
@@ -23,13 +21,16 @@
 		</p>
 	</a>
 
-	<div class="flex w-fit font-plex_mono font-medium">
+	<div
+		class="flex w-fit font-plex_mono font-medium uppercase tracking-widest"
+	>
 		{#each navlinks as link}
 			{#if link === "home"}
 				<a
 					class={`${navStyle} ${
-						currentURL === "/" &&
-						"border-stone-800 bg-stone-800 prose prose-invert"
+						currentURL === "/"
+							? "bg-neutral-800"
+							: "hover:bg-neutral-800"
 					}`}
 					href={`/`}
 				>
@@ -39,7 +40,7 @@
 				<a
 					class={`${navStyle} ${
 						link === currentURL &&
-						"border-stone-800 bg-stone-800 prose prose-invert"
+						"border-neutral-800 bg-neutral-800 prose prose-invert"
 					}`}
 					href={link === "home"
 						? "/"
@@ -49,7 +50,7 @@
 				</a>
 			{:else}
 				<a
-					class={`${navStyle} hover:bg-stone-800 hover:prose hover:prose-invert hover:border-stone-800`}
+					class={`${navStyle} hover:bg-neutral-800 hover:prose hover:prose-invert hover:border-neutral-800`}
 					href={link === "home"
 						? "/"
 						: `/${link}`}
